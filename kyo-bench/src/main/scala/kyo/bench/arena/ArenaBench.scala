@@ -39,6 +39,8 @@ object ArenaBench:
         def kyoBenchFiber(): kyo.<[A, kyo.Async & kyo.Abort[Throwable]] = kyoBench()
         def kyoBench(): kyo.<[A, kyo.Sync]
         def catsBench(): cats.effect.IO[A]
+        def oxBench(): A                             = ???
+        def pekkoBench(): scala.concurrent.Future[A] = ???
     end Base
 
     abstract class Fork[A](expectedResult: A) extends Base[A](expectedResult):
@@ -58,6 +60,20 @@ object ArenaBench:
         def forkZIO(warmup: ZIOForkWarmup): A = zio.Unsafe.unsafe(implicit u =>
             zioRuntime.run(zio.ZIO.yieldNow.flatMap(_ => zioBench())).getOrThrow()
         )
+
+        @Benchmark
+        def forkOx(warmup: OxForkWarmup): A =
+            import ox.*
+            supervised(fork(oxBench()).join())
+        end forkOx
+
+        @Benchmark
+        def forkPekko(warmup: PekkoForkWarmup): A =
+            import scala.concurrent.ExecutionContext.Implicits.global
+            import scala.concurrent.Await
+            import scala.concurrent.duration.Duration
+            Await.result(pekkoBench(), Duration.Inf)
+        end forkPekko
     end Fork
 
     abstract class ForkOnly[A](expectedResult: A) extends Fork[A](expectedResult):
@@ -79,5 +95,16 @@ object ArenaBench:
         def syncZIO(warmup: ZIOSyncWarmup): A = zio.Unsafe.unsafe(implicit u =>
             zioRuntime.run(zioBench()).getOrThrow()
         )
+
+        @Benchmark
+        def syncOx(warmup: OxSyncWarmup): A = oxBench()
+
+        @Benchmark
+        def syncPekko(warmup: PekkoSyncWarmup): A =
+            import scala.concurrent.ExecutionContext.Implicits.global
+            import scala.concurrent.Await
+            import scala.concurrent.duration.Duration
+            Await.result(pekkoBench(), Duration.Inf)
+        end syncPekko
     end SyncAndFork
 end ArenaBench

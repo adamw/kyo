@@ -655,7 +655,9 @@ lazy val `kyo-bench` =
             libraryDependencies += "org.http4s"           %% "http4s-dsl"          % "1.0.0-M44",
             libraryDependencies += "dev.zio"              %% "zio-http"            % "3.3.3",
             libraryDependencies += "io.vertx"              % "vertx-core"          % "5.0.0",
-            libraryDependencies += "io.vertx"              % "vertx-web"           % "5.0.0"
+            libraryDependencies += "io.vertx"              % "vertx-web"           % "5.0.0",
+            libraryDependencies += "com.softwaremill.ox"  %% "core"                % "1.0.0-RC2",
+            libraryDependencies += "org.apache.pekko"     %% "pekko-stream"        % "1.1.5"
         )
 
 lazy val rewriteReadmeFile = taskKey[Unit]("Rewrite README file")

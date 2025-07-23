@@ -49,4 +49,33 @@ class ForkChainedBench extends ArenaBench.ForkOnly(0):
         end for
     end zioBench
 
+    override def oxBench() =
+        import ox.*
+        import ox.channels.Channel
+
+        def iterate(p: Channel[Unit], n: Int)(using Ox): Unit =
+            if n <= 0 then p.send(())
+            else forkDiscard(iterate(p, n - 1))
+
+        supervised:
+            val p = Channel.buffered[Unit](1)
+            forkDiscard(iterate(p, depth))
+            p.receive()
+            0
+    end oxBench
+
+    override def pekkoBench() =
+        import scala.concurrent.ExecutionContext.Implicits.global
+        import scala.concurrent.{Await, Future, Promise}
+        import scala.concurrent.duration.Duration
+
+        def iterate(p: Promise[Unit], n: Int): Unit =
+            if n <= 0 then p.success(())
+            else
+                val _ = Future(iterate(p, n - 1))
+
+        val p = Promise[Unit]()
+        val _ = Future(iterate(p, depth))
+        p.future.map(_ => 0)
+    end pekkoBench
 end ForkChainedBench

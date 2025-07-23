@@ -1,0 +1,1103 @@
+Command: sbt "kyo-bench/jmh:run StreamBench -wi 10 -i 10 -f 1 -t 1 -r 1 -w 1"
+Started at: śro 23 lip 14:10:46 2025 CEST
+----------------------------------------
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::arrayBaseOffset has been called by net.openhft.hashing.UnsafeAccess (file:/Users/adamw/.sbt/boot/scala-2.12.20/org.scala-sbt/sbt/1.11.2/zero-allocation-hashing-0.16.jar)
+WARNING: Please consider reporting this to the maintainers of class net.openhft.hashing.UnsafeAccess
+WARNING: sun.misc.Unsafe::arrayBaseOffset will be removed in a future release
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.scalasbt.ipcsocket.NativeLoader in an unnamed module (file:/Users/adamw/.sbt/boot/scala-2.12.20/org.scala-sbt/sbt/1.11.2/ipcsocket-1.6.3.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[info] welcome to sbt 1.11.2 (Eclipse Adoptium Java 24.0.2)
+[info] loading settings for project global-plugins from idea.sbt, sbt-updates.sbt...
+[info] loading global plugins from /Users/adamw/.sbt/1.0/plugins
+[info] loading settings for project kyo-build-build-build from metals.sbt...
+[info] loading project definition from /Users/adamw/projects/kyo/project/project/project
+[info] loading settings for project kyo-build-build from metals.sbt...
+[info] loading project definition from /Users/adamw/projects/kyo/project/project
+[success] Generated .bloop/kyo-build-build.json
+[success] Total time: 1 s, completed Jul 23, 2025, 2:10:49 PM
+[info] loading settings for project kyo-build from metals.sbt, plugins.sbt...
+[info] loading project definition from /Users/adamw/projects/kyo/project
+[success] Generated .bloop/kyo-build.json
+[success] Total time: 1 s, completed Jul 23, 2025, 2:10:50 PM
+[info] loading settings for project kyoJVM from build.sbt...
+[info] resolving key references (75225 settings) ...
+[info] set current project to kyoJVM (in build file:/Users/adamw/projects/kyo/)
+[warn] there are 2 keys that are not used by any other settings/tasks:
+[warn]  
+[warn] * kyo-examples / mimaFailOnProblem
+[warn]   +- /Users/adamw/projects/kyo/build.sbt:730
+[warn] * kyo-examples / mimaPreviousArtifacts
+[warn]   +- /Users/adamw/projects/kyo/build.sbt:728
+[warn]  
+[warn] note: a setting might still be used by a command; to exclude a key from this `lintUnused` check
+[warn] either append it to `Global / excludeLintKeys` or call .withRank(KeyRanks.Invisible) on the key
+[info] set current project to kyoJVM (in build file:/Users/adamw/projects/kyo/)
+[warn] sbt 0.13 shell syntax is deprecated; use slash syntax instead: kyo-bench / Jmh / run
+[warn] multiple main classes detected: run 'show discoveredMainClasses' to see the list
+[info] running (fork) org.openjdk.jmh.Main StreamBench -wi 10 -i 10 -f 1 -t 1 -r 1 -w 1
+[error] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+[error] WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/adamw/projects/kyo/target/bg-jobs/sbt_f5fe9971/target/f864821f/1296d6b9/jmh-core-1.37.jar)
+[error] WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+[error] WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[info] # JMH version: 1.37
+[info] # VM version: JDK 24.0.2, OpenJDK 64-Bit Server VM, 24.0.2+12
+[info] # VM invoker: /Users/adamw/.sdkman/candidates/java/24.0.2-tem/bin/java
+[info] # VM options: --add-opens=java.base/java.lang=ALL-UNNAMED -XX:+UnlockExperimentalVMOptions -XX:-DoJVMTIVirtualThreadTransitions -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+[info] # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+[info] # Warmup: 10 iterations, 1 s each
+[info] # Measurement: 10 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: kyo.bench.arena.StreamBench.forkCats
+[info] # Run progress: 0.00% complete, ETA 00:03:20
+[info] # Fork: 1 of 1
+[info] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/adamw/projects/kyo/target/bg-jobs/sbt_f5fe9971/target/f864821f/1296d6b9/jmh-core-1.37.jar)
+[info] WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[info] # Warmup Iteration   1: JIT profile warmup disabled
+[info] 4444.991 ops/s
+[info] # Warmup Iteration   2: 9765.400 ops/s
+[info] # Warmup Iteration   3: 11027.730 ops/s
+[info] # Warmup Iteration   4: 11047.597 ops/s
+[info] # Warmup Iteration   5: 11183.472 ops/s
+[info] # Warmup Iteration   6: 11210.926 ops/s
+[info] # Warmup Iteration   7: 11182.759 ops/s
+[info] # Warmup Iteration   8: 11210.982 ops/s
+[info] # Warmup Iteration   9: 11110.466 ops/s
+[info] # Warmup Iteration  10: 11102.828 ops/s
+[info] Iteration   1: 11307.506 ops/s
+[info] Iteration   2: 11328.045 ops/s
+[info] Iteration   3: 11342.795 ops/s
+[info] Iteration   4: 11281.361 ops/s
+[info] Iteration   5: 10555.564 ops/s
+[info] Iteration   6: 11287.949 ops/s
+[info] Iteration   7: 11274.338 ops/s
+[info] Iteration   8: 11332.242 ops/s
+[info] Iteration   9: 11298.743 ops/s
+[info] Iteration  10: 11119.284 ops/s
+[info] Result "kyo.bench.arena.StreamBench.forkCats":
+[info]   11212.783 ±(99.9%) 361.879 ops/s [Average]
+[info]   (min, avg, max) = (10555.564, 11212.783, 11342.795), stdev = 239.361
+[info]   CI (99.9%): [10850.904, 11574.662] (assumes normal distribution)
+[info] # JMH version: 1.37
+[info] # VM version: JDK 24.0.2, OpenJDK 64-Bit Server VM, 24.0.2+12
+[info] # VM invoker: /Users/adamw/.sdkman/candidates/java/24.0.2-tem/bin/java
+[info] # VM options: --add-opens=java.base/java.lang=ALL-UNNAMED -XX:+UnlockExperimentalVMOptions -XX:-DoJVMTIVirtualThreadTransitions -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+[info] # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+[info] # Warmup: 10 iterations, 1 s each
+[info] # Measurement: 10 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: kyo.bench.arena.StreamBench.forkKyo
+[info] # Run progress: 10.00% complete, ETA 00:03:08
+[info] # Fork: 1 of 1
+[info] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/adamw/projects/kyo/target/bg-jobs/sbt_f5fe9971/target/f864821f/1296d6b9/jmh-core-1.37.jar)
+[info] WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[info] # Warmup Iteration   1: JIT profile warmup disabled
+[info] 7790.357 ops/s
+[info] # Warmup Iteration   2: 9838.770 ops/s
+[info] # Warmup Iteration   3: 10135.536 ops/s
+[info] # Warmup Iteration   4: 10129.261 ops/s
+[info] # Warmup Iteration   5: 10196.064 ops/s
+[info] # Warmup Iteration   6: 10175.270 ops/s
+[info] # Warmup Iteration   7: 9990.370 ops/s
+[info] # Warmup Iteration   8: 10209.886 ops/s
+[info] # Warmup Iteration   9: 10152.671 ops/s
+[info] # Warmup Iteration  10: 10181.755 ops/s
+[info] Iteration   1: 10202.056 ops/s
+[info] Iteration   2: 10237.052 ops/s
+[info] Iteration   3: 10017.661 ops/s
+[info] Iteration   4: 10078.100 ops/s
+[info] Iteration   5: 9920.178 ops/s
+[info] Iteration   6: 10061.518 ops/s
+[info] Iteration   7: 9938.072 ops/s
+[info] Iteration   8: 10039.218 ops/s
+[info] Iteration   9: 9740.374 ops/s
+[info] Iteration  10: 11056.859 ops/s
+[info] Result "kyo.bench.arena.StreamBench.forkKyo":
+[info]   10129.109 ±(99.9%) 537.277 ops/s [Average]
+[info]   (min, avg, max) = (9740.374, 10129.109, 11056.859), stdev = 355.376
+[info]   CI (99.9%): [9591.832, 10666.386] (assumes normal distribution)
+[info] # JMH version: 1.37
+[info] # VM version: JDK 24.0.2, OpenJDK 64-Bit Server VM, 24.0.2+12
+[info] # VM invoker: /Users/adamw/.sdkman/candidates/java/24.0.2-tem/bin/java
+[info] # VM options: --add-opens=java.base/java.lang=ALL-UNNAMED -XX:+UnlockExperimentalVMOptions -XX:-DoJVMTIVirtualThreadTransitions -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+[info] # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+[info] # Warmup: 10 iterations, 1 s each
+[info] # Measurement: 10 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: kyo.bench.arena.StreamBench.forkOx
+[info] # Run progress: 20.00% complete, ETA 00:02:47
+[info] # Fork: 1 of 1
+[info] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/adamw/projects/kyo/target/bg-jobs/sbt_f5fe9971/target/f864821f/1296d6b9/jmh-core-1.37.jar)
+[info] WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[info] # Warmup Iteration   1: JIT profile warmup disabled
+[info] 12785.525 ops/s
+[info] # Warmup Iteration   2: 13794.109 ops/s
+[info] # Warmup Iteration   3: 14114.895 ops/s
+[info] # Warmup Iteration   4: 14150.102 ops/s
+[info] # Warmup Iteration   5: 13796.252 ops/s
+[info] # Warmup Iteration   6: 14358.149 ops/s
+[info] # Warmup Iteration   7: 14273.183 ops/s
+[info] # Warmup Iteration   8: 13711.924 ops/s
+[info] # Warmup Iteration   9: 14270.287 ops/s
+[info] # Warmup Iteration  10: 14164.704 ops/s
+[info] Iteration   1: 14376.893 ops/s
+[info] Iteration   2: 14190.831 ops/s
+[info] Iteration   3: 14298.535 ops/s
+[info] Iteration   4: 14243.363 ops/s
+[info] Iteration   5: 14181.286 ops/s
+[info] Iteration   6: 14277.054 ops/s
+[info] Iteration   7: 14222.601 ops/s
+[info] Iteration   8: 14253.955 ops/s
+[info] Iteration   9: 14424.569 ops/s
+[info] Iteration  10: 14187.612 ops/s
+[info] Result "kyo.bench.arena.StreamBench.forkOx":
+[info]   14265.670 ±(99.9%) 123.580 ops/s [Average]
+[info]   (min, avg, max) = (14181.286, 14265.670, 14424.569), stdev = 81.741
+[info]   CI (99.9%): [14142.090, 14389.250] (assumes normal distribution)
+[info] # JMH version: 1.37
+[info] # VM version: JDK 24.0.2, OpenJDK 64-Bit Server VM, 24.0.2+12
+[info] # VM invoker: /Users/adamw/.sdkman/candidates/java/24.0.2-tem/bin/java
+[info] # VM options: --add-opens=java.base/java.lang=ALL-UNNAMED -XX:+UnlockExperimentalVMOptions -XX:-DoJVMTIVirtualThreadTransitions -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+[info] # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+[info] # Warmup: 10 iterations, 1 s each
+[info] # Measurement: 10 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: kyo.bench.arena.StreamBench.forkPekko
+[info] # Run progress: 30.00% complete, ETA 00:02:26
+[info] # Fork: 1 of 1
+[info] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/adamw/projects/kyo/target/bg-jobs/sbt_f5fe9971/target/f864821f/1296d6b9/jmh-core-1.37.jar)
+[info] WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[info] # Warmup Iteration   1: JIT profile warmup disabled
+[info] 1022.473 ops/s
+[info] # Warmup Iteration   2: 1898.138 ops/s
+[info] # Warmup Iteration   3: 1973.577 ops/s
+[info] # Warmup Iteration   4: 1964.614 ops/s
+[info] # Warmup Iteration   5: 2040.846 ops/s
+[info] # Warmup Iteration   6: 2041.152 ops/s
+[info] # Warmup Iteration   7: 2053.309 ops/s
+[info] # Warmup Iteration   8: 2047.365 ops/s
+[info] # Warmup Iteration   9: 2048.437 ops/s
+[info] # Warmup Iteration  10: 2036.270 ops/s
+[info] Iteration   1: 2046.719 ops/s
+[info] Iteration   2: 2049.903 ops/s
+[info] Iteration   3: 2066.638 ops/s
+[info] Iteration   4: 2061.492 ops/s
+[info] Iteration   5: 2060.179 ops/s
+[info] Iteration   6: 2057.772 ops/s
+[info] Iteration   7: 2049.449 ops/s
+[info] Iteration   8: 2063.534 ops/s
+[info] Iteration   9: 2039.777 ops/s
+[info] Iteration  10: 2046.115 ops/s
+[info] <JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 24 seconds more...>
+[info] Non-finished threads:
+[info] Thread[#45,StreamBench-pekko.actor.default-dispatcher-6,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#48,StreamBench-pekko.actor.default-dispatcher-8,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#46,StreamBench-pekko.actor.default-dispatcher-7,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#50,DestroyJavaVM,5,main]
+[info] Thread[#42,StreamBench-pekko.actor.internal-dispatcher-3,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#44,StreamBench-pekko.actor.default-dispatcher-5,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#41,StreamBench-pekko.actor.internal-dispatcher-2,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#43,StreamBench-pekko.actor.internal-dispatcher-4,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#40,StreamBench-scheduler-1,5,main]
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos0(Native Method)
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos(Thread.java:482)
+[info]   at java.base@24.0.2/java.lang.Thread.sleep(Thread.java:513)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:121)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.nextTick(LightArrayRevolverScheduler.scala:314)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.run(LightArrayRevolverScheduler.scala:284)
+[info]   at java.base@24.0.2/java.lang.Thread.runWith(Thread.java:1460)
+[info]   at java.base@24.0.2/java.lang.Thread.run(Thread.java:1447)
+[info] <JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 19 seconds more...>
+[info] Non-finished threads:
+[info] Thread[#45,StreamBench-pekko.actor.default-dispatcher-6,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#48,StreamBench-pekko.actor.default-dispatcher-8,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#46,StreamBench-pekko.actor.default-dispatcher-7,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#50,DestroyJavaVM,5,main]
+[info] Thread[#42,StreamBench-pekko.actor.internal-dispatcher-3,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#44,StreamBench-pekko.actor.default-dispatcher-5,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#41,StreamBench-pekko.actor.internal-dispatcher-2,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#43,StreamBench-pekko.actor.internal-dispatcher-4,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#40,StreamBench-scheduler-1,5,main]
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos0(Native Method)
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos(Thread.java:482)
+[info]   at java.base@24.0.2/java.lang.Thread.sleep(Thread.java:513)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:121)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.nextTick(LightArrayRevolverScheduler.scala:314)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.run(LightArrayRevolverScheduler.scala:284)
+[info]   at java.base@24.0.2/java.lang.Thread.runWith(Thread.java:1460)
+[info]   at java.base@24.0.2/java.lang.Thread.run(Thread.java:1447)
+[info] <JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 14 seconds more...>
+[info] Non-finished threads:
+[info] Thread[#45,StreamBench-pekko.actor.default-dispatcher-6,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#48,StreamBench-pekko.actor.default-dispatcher-8,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#46,StreamBench-pekko.actor.default-dispatcher-7,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#50,DestroyJavaVM,5,main]
+[info] Thread[#42,StreamBench-pekko.actor.internal-dispatcher-3,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#44,StreamBench-pekko.actor.default-dispatcher-5,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#41,StreamBench-pekko.actor.internal-dispatcher-2,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#43,StreamBench-pekko.actor.internal-dispatcher-4,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#40,StreamBench-scheduler-1,5,main]
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos0(Native Method)
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos(Thread.java:482)
+[info]   at java.base@24.0.2/java.lang.Thread.sleep(Thread.java:513)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:121)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.nextTick(LightArrayRevolverScheduler.scala:314)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.run(LightArrayRevolverScheduler.scala:284)
+[info]   at java.base@24.0.2/java.lang.Thread.runWith(Thread.java:1460)
+[info]   at java.base@24.0.2/java.lang.Thread.run(Thread.java:1447)
+[info] <JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 9 seconds more...>
+[info] Non-finished threads:
+[info] Thread[#45,StreamBench-pekko.actor.default-dispatcher-6,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#48,StreamBench-pekko.actor.default-dispatcher-8,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#46,StreamBench-pekko.actor.default-dispatcher-7,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#50,DestroyJavaVM,5,main]
+[info] Thread[#42,StreamBench-pekko.actor.internal-dispatcher-3,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#44,StreamBench-pekko.actor.default-dispatcher-5,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#41,StreamBench-pekko.actor.internal-dispatcher-2,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#43,StreamBench-pekko.actor.internal-dispatcher-4,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#40,StreamBench-scheduler-1,5,main]
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos0(Native Method)
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos(Thread.java:482)
+[info]   at java.base@24.0.2/java.lang.Thread.sleep(Thread.java:513)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:121)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.nextTick(LightArrayRevolverScheduler.scala:314)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.run(LightArrayRevolverScheduler.scala:284)
+[info]   at java.base@24.0.2/java.lang.Thread.runWith(Thread.java:1460)
+[info]   at java.base@24.0.2/java.lang.Thread.run(Thread.java:1447)
+[info] <JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 4 seconds more...>
+[info] Non-finished threads:
+[info] Thread[#45,StreamBench-pekko.actor.default-dispatcher-6,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#48,StreamBench-pekko.actor.default-dispatcher-8,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#46,StreamBench-pekko.actor.default-dispatcher-7,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#50,DestroyJavaVM,5,main]
+[info] Thread[#42,StreamBench-pekko.actor.internal-dispatcher-3,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#44,StreamBench-pekko.actor.default-dispatcher-5,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#41,StreamBench-pekko.actor.internal-dispatcher-2,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#43,StreamBench-pekko.actor.internal-dispatcher-4,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#40,StreamBench-scheduler-1,5,main]
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos0(Native Method)
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos(Thread.java:482)
+[info]   at java.base@24.0.2/java.lang.Thread.sleep(Thread.java:513)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:121)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.nextTick(LightArrayRevolverScheduler.scala:314)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.run(LightArrayRevolverScheduler.scala:284)
+[info]   at java.base@24.0.2/java.lang.Thread.runWith(Thread.java:1460)
+[info]   at java.base@24.0.2/java.lang.Thread.run(Thread.java:1447)
+[info] <JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 0 seconds more...>
+[info] Non-finished threads:
+[info] Thread[#45,StreamBench-pekko.actor.default-dispatcher-6,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#48,StreamBench-pekko.actor.default-dispatcher-8,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#46,StreamBench-pekko.actor.default-dispatcher-7,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#50,DestroyJavaVM,5,main]
+[info] Thread[#42,StreamBench-pekko.actor.internal-dispatcher-3,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#44,StreamBench-pekko.actor.default-dispatcher-5,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#41,StreamBench-pekko.actor.internal-dispatcher-2,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#43,StreamBench-pekko.actor.internal-dispatcher-4,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#40,StreamBench-scheduler-1,5,main]
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos0(Native Method)
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos(Thread.java:482)
+[info]   at java.base@24.0.2/java.lang.Thread.sleep(Thread.java:513)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:121)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.nextTick(LightArrayRevolverScheduler.scala:314)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.run(LightArrayRevolverScheduler.scala:284)
+[info]   at java.base@24.0.2/java.lang.Thread.runWith(Thread.java:1460)
+[info]   at java.base@24.0.2/java.lang.Thread.run(Thread.java:1447)
+[info] <shutdown timeout of 30 seconds expired, forcing forked VM to exit>
+[info] Result "kyo.bench.arena.StreamBench.forkPekko":
+[info]   2054.158 ±(99.9%) 13.465 ops/s [Average]
+[info]   (min, avg, max) = (2039.777, 2054.158, 2066.638), stdev = 8.906
+[info]   CI (99.9%): [2040.693, 2067.623] (assumes normal distribution)
+[info] # JMH version: 1.37
+[info] # VM version: JDK 24.0.2, OpenJDK 64-Bit Server VM, 24.0.2+12
+[info] # VM invoker: /Users/adamw/.sdkman/candidates/java/24.0.2-tem/bin/java
+[info] # VM options: --add-opens=java.base/java.lang=ALL-UNNAMED -XX:+UnlockExperimentalVMOptions -XX:-DoJVMTIVirtualThreadTransitions -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+[info] # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+[info] # Warmup: 10 iterations, 1 s each
+[info] # Measurement: 10 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: kyo.bench.arena.StreamBench.forkZIO
+[info] # Run progress: 40.00% complete, ETA 00:02:50
+[info] # Fork: 1 of 1
+[info] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/adamw/projects/kyo/target/bg-jobs/sbt_f5fe9971/target/f864821f/1296d6b9/jmh-core-1.37.jar)
+[info] WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[info] # Warmup Iteration   1: JIT profile warmup disabled
+[info] 3400.033 ops/s
+[info] # Warmup Iteration   2: 6548.177 ops/s
+[info] # Warmup Iteration   3: 7920.557 ops/s
+[info] # Warmup Iteration   4: 8070.296 ops/s
+[info] # Warmup Iteration   5: 8196.059 ops/s
+[info] # Warmup Iteration   6: 8372.946 ops/s
+[info] # Warmup Iteration   7: 8329.255 ops/s
+[info] # Warmup Iteration   8: 8402.557 ops/s
+[info] # Warmup Iteration   9: 8454.590 ops/s
+[info] # Warmup Iteration  10: 8402.690 ops/s
+[info] Iteration   1: 8339.940 ops/s
+[info] Iteration   2: 8369.930 ops/s
+[info] Iteration   3: 8398.149 ops/s
+[info] Iteration   4: 8452.341 ops/s
+[info] Iteration   5: 8267.416 ops/s
+[info] Iteration   6: 8413.833 ops/s
+[info] Iteration   7: 8405.395 ops/s
+[info] Iteration   8: 8410.533 ops/s
+[info] Iteration   9: 8459.800 ops/s
+[info] Iteration  10: 8383.326 ops/s
+[info] Result "kyo.bench.arena.StreamBench.forkZIO":
+[info]   8390.066 ±(99.9%) 84.375 ops/s [Average]
+[info]   (min, avg, max) = (8267.416, 8390.066, 8459.800), stdev = 55.809
+[info]   CI (99.9%): [8305.691, 8474.441] (assumes normal distribution)
+[info] # JMH version: 1.37
+[info] # VM version: JDK 24.0.2, OpenJDK 64-Bit Server VM, 24.0.2+12
+[info] # VM invoker: /Users/adamw/.sdkman/candidates/java/24.0.2-tem/bin/java
+[info] # VM options: --add-opens=java.base/java.lang=ALL-UNNAMED -XX:+UnlockExperimentalVMOptions -XX:-DoJVMTIVirtualThreadTransitions -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+[info] # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+[info] # Warmup: 10 iterations, 1 s each
+[info] # Measurement: 10 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: kyo.bench.arena.StreamBench.syncCats
+[info] # Run progress: 50.00% complete, ETA 00:02:14
+[info] # Fork: 1 of 1
+[info] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/adamw/projects/kyo/target/bg-jobs/sbt_f5fe9971/target/f864821f/1296d6b9/jmh-core-1.37.jar)
+[info] WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[info] # Warmup Iteration   1: JIT profile warmup disabled
+[info] 4514.935 ops/s
+[info] # Warmup Iteration   2: 9510.031 ops/s
+[info] # Warmup Iteration   3: 11108.054 ops/s
+[info] # Warmup Iteration   4: 11213.929 ops/s
+[info] # Warmup Iteration   5: 11217.625 ops/s
+[info] # Warmup Iteration   6: 11316.153 ops/s
+[info] # Warmup Iteration   7: 11116.262 ops/s
+[info] # Warmup Iteration   8: 11299.577 ops/s
+[info] # Warmup Iteration   9: 11237.370 ops/s
+[info] # Warmup Iteration  10: 11263.298 ops/s
+[info] Iteration   1: 11311.976 ops/s
+[info] Iteration   2: 11290.482 ops/s
+[info] Iteration   3: 11322.660 ops/s
+[info] Iteration   4: 11269.396 ops/s
+[info] Iteration   5: 11258.445 ops/s
+[info] Iteration   6: 11370.409 ops/s
+[info] Iteration   7: 11321.360 ops/s
+[info] Iteration   8: 11332.995 ops/s
+[info] Iteration   9: 11318.110 ops/s
+[info] Iteration  10: 11357.742 ops/s
+[info] Result "kyo.bench.arena.StreamBench.syncCats":
+[info]   11315.357 ±(99.9%) 53.373 ops/s [Average]
+[info]   (min, avg, max) = (11258.445, 11315.357, 11370.409), stdev = 35.303
+[info]   CI (99.9%): [11261.984, 11368.731] (assumes normal distribution)
+[info] # JMH version: 1.37
+[info] # VM version: JDK 24.0.2, OpenJDK 64-Bit Server VM, 24.0.2+12
+[info] # VM invoker: /Users/adamw/.sdkman/candidates/java/24.0.2-tem/bin/java
+[info] # VM options: --add-opens=java.base/java.lang=ALL-UNNAMED -XX:+UnlockExperimentalVMOptions -XX:-DoJVMTIVirtualThreadTransitions -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+[info] # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+[info] # Warmup: 10 iterations, 1 s each
+[info] # Measurement: 10 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: kyo.bench.arena.StreamBench.syncKyo
+[info] # Run progress: 60.00% complete, ETA 00:01:43
+[info] # Fork: 1 of 1
+[info] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/adamw/projects/kyo/target/bg-jobs/sbt_f5fe9971/target/f864821f/1296d6b9/jmh-core-1.37.jar)
+[info] WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[info] # Warmup Iteration   1: JIT profile warmup disabled
+[info] 12198.259 ops/s
+[info] # Warmup Iteration   2: 13721.778 ops/s
+[info] # Warmup Iteration   3: 13982.184 ops/s
+[info] # Warmup Iteration   4: 13919.800 ops/s
+[info] # Warmup Iteration   5: 14031.603 ops/s
+[info] # Warmup Iteration   6: 14072.074 ops/s
+[info] # Warmup Iteration   7: 13942.202 ops/s
+[info] # Warmup Iteration   8: 14024.659 ops/s
+[info] # Warmup Iteration   9: 14001.131 ops/s
+[info] # Warmup Iteration  10: 14027.636 ops/s
+[info] Iteration   1: 14054.482 ops/s
+[info] Iteration   2: 13997.637 ops/s
+[info] Iteration   3: 13965.972 ops/s
+[info] Iteration   4: 14051.370 ops/s
+[info] Iteration   5: 14015.724 ops/s
+[info] Iteration   6: 14075.881 ops/s
+[info] Iteration   7: 13978.021 ops/s
+[info] Iteration   8: 13965.862 ops/s
+[info] Iteration   9: 14074.395 ops/s
+[info] Iteration  10: 13859.571 ops/s
+[info] Result "kyo.bench.arena.StreamBench.syncKyo":
+[info]   14003.891 ±(99.9%) 100.194 ops/s [Average]
+[info]   (min, avg, max) = (13859.571, 14003.891, 14075.881), stdev = 66.272
+[info]   CI (99.9%): [13903.698, 14104.085] (assumes normal distribution)
+[info] # JMH version: 1.37
+[info] # VM version: JDK 24.0.2, OpenJDK 64-Bit Server VM, 24.0.2+12
+[info] # VM invoker: /Users/adamw/.sdkman/candidates/java/24.0.2-tem/bin/java
+[info] # VM options: --add-opens=java.base/java.lang=ALL-UNNAMED -XX:+UnlockExperimentalVMOptions -XX:-DoJVMTIVirtualThreadTransitions -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+[info] # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+[info] # Warmup: 10 iterations, 1 s each
+[info] # Measurement: 10 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: kyo.bench.arena.StreamBench.syncOx
+[info] # Run progress: 70.00% complete, ETA 00:01:15
+[info] # Fork: 1 of 1
+[info] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/adamw/projects/kyo/target/bg-jobs/sbt_f5fe9971/target/f864821f/1296d6b9/jmh-core-1.37.jar)
+[info] WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[info] # Warmup Iteration   1: JIT profile warmup disabled
+[info] 33867.782 ops/s
+[info] # Warmup Iteration   2: 40577.817 ops/s
+[info] # Warmup Iteration   3: 39348.823 ops/s
+[info] # Warmup Iteration   4: 28084.919 ops/s
+[info] # Warmup Iteration   5: 27901.412 ops/s
+[info] # Warmup Iteration   6: 28182.958 ops/s
+[info] # Warmup Iteration   7: 28047.368 ops/s
+[info] # Warmup Iteration   8: 27931.878 ops/s
+[info] # Warmup Iteration   9: 28244.934 ops/s
+[info] # Warmup Iteration  10: 28019.347 ops/s
+[info] Iteration   1: 28048.741 ops/s
+[info] Iteration   2: 27913.102 ops/s
+[info] Iteration   3: 27921.273 ops/s
+[info] Iteration   4: 28143.692 ops/s
+[info] Iteration   5: 28002.010 ops/s
+[info] Iteration   6: 28187.603 ops/s
+[info] Iteration   7: 28066.197 ops/s
+[info] Iteration   8: 27828.806 ops/s
+[info] Iteration   9: 28146.933 ops/s
+[info] Iteration  10: 27974.936 ops/s
+[info] Result "kyo.bench.arena.StreamBench.syncOx":
+[info]   28023.329 ±(99.9%) 176.337 ops/s [Average]
+[info]   (min, avg, max) = (27828.806, 28023.329, 28187.603), stdev = 116.636
+[info]   CI (99.9%): [27846.992, 28199.666] (assumes normal distribution)
+[info] # JMH version: 1.37
+[info] # VM version: JDK 24.0.2, OpenJDK 64-Bit Server VM, 24.0.2+12
+[info] # VM invoker: /Users/adamw/.sdkman/candidates/java/24.0.2-tem/bin/java
+[info] # VM options: --add-opens=java.base/java.lang=ALL-UNNAMED -XX:+UnlockExperimentalVMOptions -XX:-DoJVMTIVirtualThreadTransitions -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+[info] # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+[info] # Warmup: 10 iterations, 1 s each
+[info] # Measurement: 10 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: kyo.bench.arena.StreamBench.syncPekko
+[info] # Run progress: 80.00% complete, ETA 00:00:49
+[info] # Fork: 1 of 1
+[info] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/adamw/projects/kyo/target/bg-jobs/sbt_f5fe9971/target/f864821f/1296d6b9/jmh-core-1.37.jar)
+[info] WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[info] # Warmup Iteration   1: JIT profile warmup disabled
+[info] 1029.052 ops/s
+[info] # Warmup Iteration   2: 1891.176 ops/s
+[info] # Warmup Iteration   3: 1945.478 ops/s
+[info] # Warmup Iteration   4: 1990.932 ops/s
+[info] # Warmup Iteration   5: 2034.067 ops/s
+[info] # Warmup Iteration   6: 2052.879 ops/s
+[info] # Warmup Iteration   7: 2048.392 ops/s
+[info] # Warmup Iteration   8: 2057.935 ops/s
+[info] # Warmup Iteration   9: 2066.673 ops/s
+[info] # Warmup Iteration  10: 2061.620 ops/s
+[info] Iteration   1: 2062.601 ops/s
+[info] Iteration   2: 2058.784 ops/s
+[info] Iteration   3: 2050.461 ops/s
+[info] Iteration   4: 2067.435 ops/s
+[info] Iteration   5: 2056.561 ops/s
+[info] Iteration   6: 2054.509 ops/s
+[info] Iteration   7: 2047.574 ops/s
+[info] Iteration   8: 2060.926 ops/s
+[info] Iteration   9: 2061.654 ops/s
+[info] Iteration  10: 2052.843 ops/s
+[info] <JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 24 seconds more...>
+[info] Non-finished threads:
+[info] Thread[#41,StreamBench-pekko.actor.internal-dispatcher-2,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#45,StreamBench-pekko.actor.default-dispatcher-6,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#40,StreamBench-scheduler-1,5,main]
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos0(Native Method)
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos(Thread.java:482)
+[info]   at java.base@24.0.2/java.lang.Thread.sleep(Thread.java:513)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:121)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.nextTick(LightArrayRevolverScheduler.scala:314)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.run(LightArrayRevolverScheduler.scala:284)
+[info]   at java.base@24.0.2/java.lang.Thread.runWith(Thread.java:1460)
+[info]   at java.base@24.0.2/java.lang.Thread.run(Thread.java:1447)
+[info] Thread[#42,StreamBench-pekko.actor.internal-dispatcher-3,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#47,StreamBench-pekko.actor.default-dispatcher-7,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#49,DestroyJavaVM,5,main]
+[info] Thread[#44,StreamBench-pekko.actor.default-dispatcher-5,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#43,StreamBench-pekko.actor.default-dispatcher-4,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] <JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 19 seconds more...>
+[info] Non-finished threads:
+[info] Thread[#41,StreamBench-pekko.actor.internal-dispatcher-2,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#45,StreamBench-pekko.actor.default-dispatcher-6,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#40,StreamBench-scheduler-1,5,main]
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos0(Native Method)
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos(Thread.java:482)
+[info]   at java.base@24.0.2/java.lang.Thread.sleep(Thread.java:513)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:121)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.nextTick(LightArrayRevolverScheduler.scala:314)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.run(LightArrayRevolverScheduler.scala:284)
+[info]   at java.base@24.0.2/java.lang.Thread.runWith(Thread.java:1460)
+[info]   at java.base@24.0.2/java.lang.Thread.run(Thread.java:1447)
+[info] Thread[#42,StreamBench-pekko.actor.internal-dispatcher-3,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#47,StreamBench-pekko.actor.default-dispatcher-7,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#49,DestroyJavaVM,5,main]
+[info] Thread[#44,StreamBench-pekko.actor.default-dispatcher-5,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#43,StreamBench-pekko.actor.default-dispatcher-4,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] <JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 14 seconds more...>
+[info] Non-finished threads:
+[info] Thread[#41,StreamBench-pekko.actor.internal-dispatcher-2,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#45,StreamBench-pekko.actor.default-dispatcher-6,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#40,StreamBench-scheduler-1,5,main]
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos0(Native Method)
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos(Thread.java:482)
+[info]   at java.base@24.0.2/java.lang.Thread.sleep(Thread.java:513)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:121)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.nextTick(LightArrayRevolverScheduler.scala:314)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.run(LightArrayRevolverScheduler.scala:284)
+[info]   at java.base@24.0.2/java.lang.Thread.runWith(Thread.java:1460)
+[info]   at java.base@24.0.2/java.lang.Thread.run(Thread.java:1447)
+[info] Thread[#42,StreamBench-pekko.actor.internal-dispatcher-3,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#47,StreamBench-pekko.actor.default-dispatcher-7,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#49,DestroyJavaVM,5,main]
+[info] Thread[#44,StreamBench-pekko.actor.default-dispatcher-5,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#43,StreamBench-pekko.actor.default-dispatcher-4,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] <JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 9 seconds more...>
+[info] Non-finished threads:
+[info] Thread[#41,StreamBench-pekko.actor.internal-dispatcher-2,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#45,StreamBench-pekko.actor.default-dispatcher-6,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#40,StreamBench-scheduler-1,5,main]
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos0(Native Method)
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos(Thread.java:482)
+[info]   at java.base@24.0.2/java.lang.Thread.sleep(Thread.java:513)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:121)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.nextTick(LightArrayRevolverScheduler.scala:314)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.run(LightArrayRevolverScheduler.scala:284)
+[info]   at java.base@24.0.2/java.lang.Thread.runWith(Thread.java:1460)
+[info]   at java.base@24.0.2/java.lang.Thread.run(Thread.java:1447)
+[info] Thread[#42,StreamBench-pekko.actor.internal-dispatcher-3,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#47,StreamBench-pekko.actor.default-dispatcher-7,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#49,DestroyJavaVM,5,main]
+[info] Thread[#44,StreamBench-pekko.actor.default-dispatcher-5,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#43,StreamBench-pekko.actor.default-dispatcher-4,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] <JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 4 seconds more...>
+[info] Non-finished threads:
+[info] Thread[#41,StreamBench-pekko.actor.internal-dispatcher-2,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#45,StreamBench-pekko.actor.default-dispatcher-6,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#40,StreamBench-scheduler-1,5,main]
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos0(Native Method)
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos(Thread.java:482)
+[info]   at java.base@24.0.2/java.lang.Thread.sleep(Thread.java:513)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:121)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.nextTick(LightArrayRevolverScheduler.scala:314)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.run(LightArrayRevolverScheduler.scala:284)
+[info]   at java.base@24.0.2/java.lang.Thread.runWith(Thread.java:1460)
+[info]   at java.base@24.0.2/java.lang.Thread.run(Thread.java:1447)
+[info] Thread[#42,StreamBench-pekko.actor.internal-dispatcher-3,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#47,StreamBench-pekko.actor.default-dispatcher-7,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#49,DestroyJavaVM,5,main]
+[info] Thread[#44,StreamBench-pekko.actor.default-dispatcher-5,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#43,StreamBench-pekko.actor.default-dispatcher-4,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] <JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 0 seconds more...>
+[info] Non-finished threads:
+[info] Thread[#41,StreamBench-pekko.actor.internal-dispatcher-2,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#45,StreamBench-pekko.actor.default-dispatcher-6,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#40,StreamBench-scheduler-1,5,main]
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos0(Native Method)
+[info]   at java.base@24.0.2/java.lang.Thread.sleepNanos(Thread.java:482)
+[info]   at java.base@24.0.2/java.lang.Thread.sleep(Thread.java:513)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:121)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.nextTick(LightArrayRevolverScheduler.scala:314)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.run(LightArrayRevolverScheduler.scala:284)
+[info]   at java.base@24.0.2/java.lang.Thread.runWith(Thread.java:1460)
+[info]   at java.base@24.0.2/java.lang.Thread.run(Thread.java:1447)
+[info] Thread[#42,StreamBench-pekko.actor.internal-dispatcher-3,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#47,StreamBench-pekko.actor.default-dispatcher-7,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#49,DestroyJavaVM,5,main]
+[info] Thread[#44,StreamBench-pekko.actor.default-dispatcher-5,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] Thread[#43,StreamBench-pekko.actor.default-dispatcher-4,5,main]
+[info]   at java.base@24.0.2/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2059)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2013)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1978)
+[info]   at java.base@24.0.2/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+[info] <shutdown timeout of 30 seconds expired, forcing forked VM to exit>
+[info] Result "kyo.bench.arena.StreamBench.syncPekko":
+[info]   2057.335 ±(99.9%) 9.219 ops/s [Average]
+[info]   (min, avg, max) = (2047.574, 2057.335, 2067.435), stdev = 6.098
+[info]   CI (99.9%): [2048.115, 2066.554] (assumes normal distribution)
+[info] # JMH version: 1.37
+[info] # VM version: JDK 24.0.2, OpenJDK 64-Bit Server VM, 24.0.2+12
+[info] # VM invoker: /Users/adamw/.sdkman/candidates/java/24.0.2-tem/bin/java
+[info] # VM options: --add-opens=java.base/java.lang=ALL-UNNAMED -XX:+UnlockExperimentalVMOptions -XX:-DoJVMTIVirtualThreadTransitions -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+[info] # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+[info] # Warmup: 10 iterations, 1 s each
+[info] # Measurement: 10 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: kyo.bench.arena.StreamBench.syncZIO
+[info] # Run progress: 90.00% complete, ETA 00:00:27
+[info] # Fork: 1 of 1
+[info] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/adamw/projects/kyo/target/bg-jobs/sbt_f5fe9971/target/f864821f/1296d6b9/jmh-core-1.37.jar)
+[info] WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[info] # Warmup Iteration   1: JIT profile warmup disabled
+[info] 3361.525 ops/s
+[info] # Warmup Iteration   2: 6784.615 ops/s
+[info] # Warmup Iteration   3: 7834.502 ops/s
+[info] # Warmup Iteration   4: 8386.878 ops/s
+[info] # Warmup Iteration   5: 8303.820 ops/s
+[info] # Warmup Iteration   6: 8399.824 ops/s
+[info] # Warmup Iteration   7: 8412.697 ops/s
+[info] # Warmup Iteration   8: 8395.265 ops/s
+[info] # Warmup Iteration   9: 8376.439 ops/s
+[info] # Warmup Iteration  10: 8347.146 ops/s
+[info] Iteration   1: 8325.533 ops/s
+[info] Iteration   2: 8454.892 ops/s
+[info] Iteration   3: 8380.986 ops/s
+[info] Iteration   4: 8434.690 ops/s
+[info] Iteration   5: 8266.923 ops/s
+[info] Iteration   6: 8327.074 ops/s
+[info] Iteration   7: 8437.006 ops/s
+[info] Iteration   8: 8468.736 ops/s
+[info] Iteration   9: 8477.216 ops/s
+[info] Iteration  10: 8386.823 ops/s
+[info] Result "kyo.bench.arena.StreamBench.syncZIO":
+[info]   8395.988 ±(99.9%) 107.166 ops/s [Average]
+[info]   (min, avg, max) = (8266.923, 8395.988, 8477.216), stdev = 70.884
+[info]   CI (99.9%): [8288.822, 8503.154] (assumes normal distribution)
+[info] # Run complete. Total time: 00:04:29
+[info] REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+[info] why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+[info] experiments, perform baseline and negative tests that provide experimental control, make sure
+[info] the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+[info] Do not assume the numbers tell you what you want them to tell.
+[info] NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+[info] extra caution when trusting the results, look into the generated code to check the benchmark still
+[info] works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+[info] different JVMs are already problematic, the performance difference caused by different Blackhole
+[info] modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+[info] Benchmark               Mode  Cnt      Score     Error  Units
+[info] StreamBench.forkCats   thrpt   10  11212.783 ± 361.879  ops/s
+[info] StreamBench.forkKyo    thrpt   10  10129.109 ± 537.277  ops/s
+[info] StreamBench.forkOx     thrpt   10  14265.670 ± 123.580  ops/s
+[info] StreamBench.forkPekko  thrpt   10   2054.158 ±  13.465  ops/s
+[info] StreamBench.forkZIO    thrpt   10   8390.066 ±  84.375  ops/s
+[info] StreamBench.syncCats   thrpt   10  11315.357 ±  53.373  ops/s
+[info] StreamBench.syncKyo    thrpt   10  14003.891 ± 100.194  ops/s
+[info] StreamBench.syncOx     thrpt   10  28023.329 ± 176.337  ops/s
+[info] StreamBench.syncPekko  thrpt   10   2057.335 ±   9.219  ops/s
+[info] StreamBench.syncZIO    thrpt   10   8395.988 ± 107.166  ops/s
+[success] Total time: 273 s (0:04:33.0), completed Jul 23, 2025, 2:15:27 PM
+Completed at: śro 23 lip 14:15:28 2025 CEST

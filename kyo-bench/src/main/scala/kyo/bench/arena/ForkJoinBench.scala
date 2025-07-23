@@ -32,4 +32,20 @@ class ForkJoinBench extends ArenaBench.ForkOnly(()):
         forkAllFibers.flatMap(fibers => ZIO.foreach(fibers)(_.await).unit)
     end zioBench
 
+    override def oxBench() =
+        import ox.*
+
+        supervised:
+            val forks = range.map(_ => fork(()))
+            forks.foreach(_.join())
+    end oxBench
+
+    override def pekkoBench() =
+        import scala.concurrent.ExecutionContext.Implicits.global
+        import scala.concurrent.{Await, Future}
+        import scala.concurrent.duration.Duration
+        val futures = range.map(_ => Future(()))
+        Future.sequence(futures).map(_ => ())
+    end pekkoBench
+
 end ForkJoinBench

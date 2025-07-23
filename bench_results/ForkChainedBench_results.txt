@@ -1,0 +1,274 @@
+Command: sbt "kyo-bench/jmh:run ForkChainedBench -wi 10 -i 10 -f 1 -t 1 -r 1 -w 1"
+Started at: śro 23 lip 14:01:12 2025 CEST
+----------------------------------------
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::arrayBaseOffset has been called by net.openhft.hashing.UnsafeAccess (file:/Users/adamw/.sbt/boot/scala-2.12.20/org.scala-sbt/sbt/1.11.2/zero-allocation-hashing-0.16.jar)
+WARNING: Please consider reporting this to the maintainers of class net.openhft.hashing.UnsafeAccess
+WARNING: sun.misc.Unsafe::arrayBaseOffset will be removed in a future release
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.scalasbt.ipcsocket.NativeLoader in an unnamed module (file:/Users/adamw/.sbt/boot/scala-2.12.20/org.scala-sbt/sbt/1.11.2/ipcsocket-1.6.3.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[info] welcome to sbt 1.11.2 (Eclipse Adoptium Java 24.0.2)
+[info] loading settings for project global-plugins from idea.sbt, sbt-updates.sbt...
+[info] loading global plugins from /Users/adamw/.sbt/1.0/plugins
+[info] loading settings for project kyo-build-build-build from metals.sbt...
+[info] loading project definition from /Users/adamw/projects/kyo/project/project/project
+[info] loading settings for project kyo-build-build from metals.sbt...
+[info] loading project definition from /Users/adamw/projects/kyo/project/project
+[success] Generated .bloop/kyo-build-build.json
+[success] Total time: 1 s, completed Jul 23, 2025, 2:01:15 PM
+[info] loading settings for project kyo-build from metals.sbt, plugins.sbt...
+[info] loading project definition from /Users/adamw/projects/kyo/project
+[success] Generated .bloop/kyo-build.json
+[success] Total time: 1 s, completed Jul 23, 2025, 2:01:16 PM
+[info] loading settings for project kyoJVM from build.sbt...
+[info] resolving key references (75225 settings) ...
+[info] set current project to kyoJVM (in build file:/Users/adamw/projects/kyo/)
+[warn] there are 2 keys that are not used by any other settings/tasks:
+[warn]  
+[warn] * kyo-examples / mimaFailOnProblem
+[warn]   +- /Users/adamw/projects/kyo/build.sbt:730
+[warn] * kyo-examples / mimaPreviousArtifacts
+[warn]   +- /Users/adamw/projects/kyo/build.sbt:728
+[warn]  
+[warn] note: a setting might still be used by a command; to exclude a key from this `lintUnused` check
+[warn] either append it to `Global / excludeLintKeys` or call .withRank(KeyRanks.Invisible) on the key
+[info] set current project to kyoJVM (in build file:/Users/adamw/projects/kyo/)
+[warn] sbt 0.13 shell syntax is deprecated; use slash syntax instead: kyo-bench / Jmh / run
+[warn] multiple main classes detected: run 'show discoveredMainClasses' to see the list
+[info] running (fork) org.openjdk.jmh.Main ForkChainedBench -wi 10 -i 10 -f 1 -t 1 -r 1 -w 1
+[error] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+[error] WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/adamw/projects/kyo/target/bg-jobs/sbt_4033c21b/target/f864821f/1296d6b9/jmh-core-1.37.jar)
+[error] WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+[error] WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[info] # JMH version: 1.37
+[info] # VM version: JDK 24.0.2, OpenJDK 64-Bit Server VM, 24.0.2+12
+[info] # VM invoker: /Users/adamw/.sdkman/candidates/java/24.0.2-tem/bin/java
+[info] # VM options: --add-opens=java.base/java.lang=ALL-UNNAMED -XX:+UnlockExperimentalVMOptions -XX:-DoJVMTIVirtualThreadTransitions -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+[info] # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+[info] # Warmup: 10 iterations, 1 s each
+[info] # Measurement: 10 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: kyo.bench.arena.ForkChainedBench.forkCats
+[info] # Run progress: 0.00% complete, ETA 00:01:40
+[info] # Fork: 1 of 1
+[info] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/adamw/projects/kyo/target/bg-jobs/sbt_4033c21b/target/f864821f/1296d6b9/jmh-core-1.37.jar)
+[info] WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[info] # Warmup Iteration   1: JIT profile warmup disabled
+[info] 445.430 ops/s
+[info] # Warmup Iteration   2: 745.005 ops/s
+[info] # Warmup Iteration   3: 775.631 ops/s
+[info] # Warmup Iteration   4: 779.931 ops/s
+[info] # Warmup Iteration   5: 770.634 ops/s
+[info] # Warmup Iteration   6: 768.955 ops/s
+[info] # Warmup Iteration   7: 762.687 ops/s
+[info] # Warmup Iteration   8: 769.065 ops/s
+[info] # Warmup Iteration   9: 777.046 ops/s
+[info] # Warmup Iteration  10: 776.677 ops/s
+[info] Iteration   1: 782.550 ops/s
+[info] Iteration   2: 785.658 ops/s
+[info] Iteration   3: 792.673 ops/s
+[info] Iteration   4: 786.745 ops/s
+[info] Iteration   5: 777.744 ops/s
+[info] Iteration   6: 779.515 ops/s
+[info] Iteration   7: 785.896 ops/s
+[info] Iteration   8: 798.519 ops/s
+[info] Iteration   9: 794.539 ops/s
+[info] Iteration  10: 799.664 ops/s
+[info] Result "kyo.bench.arena.ForkChainedBench.forkCats":
+[info]   788.350 ±(99.9%) 11.585 ops/s [Average]
+[info]   (min, avg, max) = (777.744, 788.350, 799.664), stdev = 7.663
+[info]   CI (99.9%): [776.765, 799.935] (assumes normal distribution)
+[info] # JMH version: 1.37
+[info] # VM version: JDK 24.0.2, OpenJDK 64-Bit Server VM, 24.0.2+12
+[info] # VM invoker: /Users/adamw/.sdkman/candidates/java/24.0.2-tem/bin/java
+[info] # VM options: --add-opens=java.base/java.lang=ALL-UNNAMED -XX:+UnlockExperimentalVMOptions -XX:-DoJVMTIVirtualThreadTransitions -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+[info] # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+[info] # Warmup: 10 iterations, 1 s each
+[info] # Measurement: 10 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: kyo.bench.arena.ForkChainedBench.forkKyo
+[info] # Run progress: 20.00% complete, ETA 00:01:23
+[info] # Fork: 1 of 1
+[info] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/adamw/projects/kyo/target/bg-jobs/sbt_4033c21b/target/f864821f/1296d6b9/jmh-core-1.37.jar)
+[info] WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[info] # Warmup Iteration   1: JIT profile warmup disabled
+[info] 811.282 ops/s
+[info] # Warmup Iteration   2: 1081.981 ops/s
+[info] # Warmup Iteration   3: 1155.902 ops/s
+[info] # Warmup Iteration   4: 1182.845 ops/s
+[info] # Warmup Iteration   5: 1175.174 ops/s
+[info] # Warmup Iteration   6: 1067.536 ops/s
+[info] # Warmup Iteration   7: 1005.356 ops/s
+[info] # Warmup Iteration   8: 968.238 ops/s
+[info] # Warmup Iteration   9: 967.582 ops/s
+[info] # Warmup Iteration  10: 978.069 ops/s
+[info] Iteration   1: 1023.434 ops/s
+[info] Iteration   2: 1027.263 ops/s
+[info] Iteration   3: 1016.720 ops/s
+[info] Iteration   4: 1016.177 ops/s
+[info] Iteration   5: 1019.592 ops/s
+[info] Iteration   6: 1010.276 ops/s
+[info] Iteration   7: 1017.798 ops/s
+[info] Iteration   8: 1021.095 ops/s
+[info] Iteration   9: 1019.196 ops/s
+[info] Iteration  10: 1017.872 ops/s
+[info] Result "kyo.bench.arena.ForkChainedBench.forkKyo":
+[info]   1018.942 ±(99.9%) 6.848 ops/s [Average]
+[info]   (min, avg, max) = (1010.276, 1018.942, 1027.263), stdev = 4.530
+[info]   CI (99.9%): [1012.094, 1025.791] (assumes normal distribution)
+[info] # JMH version: 1.37
+[info] # VM version: JDK 24.0.2, OpenJDK 64-Bit Server VM, 24.0.2+12
+[info] # VM invoker: /Users/adamw/.sdkman/candidates/java/24.0.2-tem/bin/java
+[info] # VM options: --add-opens=java.base/java.lang=ALL-UNNAMED -XX:+UnlockExperimentalVMOptions -XX:-DoJVMTIVirtualThreadTransitions -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+[info] # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+[info] # Warmup: 10 iterations, 1 s each
+[info] # Measurement: 10 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: kyo.bench.arena.ForkChainedBench.forkOx
+[info] # Run progress: 40.00% complete, ETA 00:01:02
+[info] # Fork: 1 of 1
+[info] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/adamw/projects/kyo/target/bg-jobs/sbt_4033c21b/target/f864821f/1296d6b9/jmh-core-1.37.jar)
+[info] WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[info] # Warmup Iteration   1: JIT profile warmup disabled
+[info] 51.004 ops/s
+[info] # Warmup Iteration   2: 58.239 ops/s
+[info] # Warmup Iteration   3: 64.260 ops/s
+[info] # Warmup Iteration   4: 59.754 ops/s
+[info] # Warmup Iteration   5: 58.371 ops/s
+[info] # Warmup Iteration   6: 60.308 ops/s
+[info] # Warmup Iteration   7: 62.442 ops/s
+[info] # Warmup Iteration   8: 64.175 ops/s
+[info] # Warmup Iteration   9: 67.234 ops/s
+[info] # Warmup Iteration  10: 67.197 ops/s
+[info] Iteration   1: 73.262 ops/s
+[info] Iteration   2: 67.434 ops/s
+[info] Iteration   3: 65.936 ops/s
+[info] Iteration   4: 66.522 ops/s
+[info] Iteration   5: 65.515 ops/s
+[info] Iteration   6: 69.985 ops/s
+[info] Iteration   7: 65.782 ops/s
+[info] Iteration   8: 63.208 ops/s
+[info] Iteration   9: 62.754 ops/s
+[info] Iteration  10: 60.306 ops/s
+[info] Result "kyo.bench.arena.ForkChainedBench.forkOx":
+[info]   66.070 ±(99.9%) 5.565 ops/s [Average]
+[info]   (min, avg, max) = (60.306, 66.070, 73.262), stdev = 3.681
+[info]   CI (99.9%): [60.506, 71.635] (assumes normal distribution)
+[info] # JMH version: 1.37
+[info] # VM version: JDK 24.0.2, OpenJDK 64-Bit Server VM, 24.0.2+12
+[info] # VM invoker: /Users/adamw/.sdkman/candidates/java/24.0.2-tem/bin/java
+[info] # VM options: --add-opens=java.base/java.lang=ALL-UNNAMED -XX:+UnlockExperimentalVMOptions -XX:-DoJVMTIVirtualThreadTransitions -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+[info] # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+[info] # Warmup: 10 iterations, 1 s each
+[info] # Measurement: 10 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: kyo.bench.arena.ForkChainedBench.forkPekko
+[info] # Run progress: 60.00% complete, ETA 00:00:41
+[info] # Fork: 1 of 1
+[info] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/adamw/projects/kyo/target/bg-jobs/sbt_4033c21b/target/f864821f/1296d6b9/jmh-core-1.37.jar)
+[info] WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[info] # Warmup Iteration   1: JIT profile warmup disabled
+[info] 277.899 ops/s
+[info] # Warmup Iteration   2: 300.966 ops/s
+[info] # Warmup Iteration   3: 304.859 ops/s
+[info] # Warmup Iteration   4: 309.716 ops/s
+[info] # Warmup Iteration   5: 316.034 ops/s
+[info] # Warmup Iteration   6: 310.117 ops/s
+[info] # Warmup Iteration   7: 320.698 ops/s
+[info] # Warmup Iteration   8: 323.255 ops/s
+[info] # Warmup Iteration   9: 319.535 ops/s
+[info] # Warmup Iteration  10: 320.822 ops/s
+[info] Iteration   1: 320.328 ops/s
+[info] Iteration   2: 315.344 ops/s
+[info] Iteration   3: 308.070 ops/s
+[info] Iteration   4: 304.482 ops/s
+[info] Iteration   5: 306.625 ops/s
+[info] Iteration   6: 303.014 ops/s
+[info] Iteration   7: 297.778 ops/s
+[info] Iteration   8: 304.673 ops/s
+[info] Iteration   9: 307.723 ops/s
+[info] Iteration  10: 360.929 ops/s
+[info] Result "kyo.bench.arena.ForkChainedBench.forkPekko":
+[info]   312.897 ±(99.9%) 27.243 ops/s [Average]
+[info]   (min, avg, max) = (297.778, 312.897, 360.929), stdev = 18.020
+[info]   CI (99.9%): [285.654, 340.140] (assumes normal distribution)
+[info] # JMH version: 1.37
+[info] # VM version: JDK 24.0.2, OpenJDK 64-Bit Server VM, 24.0.2+12
+[info] # VM invoker: /Users/adamw/.sdkman/candidates/java/24.0.2-tem/bin/java
+[info] # VM options: --add-opens=java.base/java.lang=ALL-UNNAMED -XX:+UnlockExperimentalVMOptions -XX:-DoJVMTIVirtualThreadTransitions -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+[info] # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+[info] # Warmup: 10 iterations, 1 s each
+[info] # Measurement: 10 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: kyo.bench.arena.ForkChainedBench.forkZIO
+[info] # Run progress: 80.00% complete, ETA 00:00:20
+[info] # Fork: 1 of 1
+[info] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset has been called by org.openjdk.jmh.util.Utils (file:/Users/adamw/projects/kyo/target/bg-jobs/sbt_4033c21b/target/f864821f/1296d6b9/jmh-core-1.37.jar)
+[info] WARNING: Please consider reporting this to the maintainers of class org.openjdk.jmh.util.Utils
+[info] WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[info] # Warmup Iteration   1: JIT profile warmup disabled
+[info] 235.296 ops/s
+[info] # Warmup Iteration   2: 367.958 ops/s
+[info] # Warmup Iteration   3: 394.323 ops/s
+[info] # Warmup Iteration   4: 401.218 ops/s
+[info] # Warmup Iteration   5: 397.290 ops/s
+[info] # Warmup Iteration   6: 400.323 ops/s
+[info] # Warmup Iteration   7: 413.543 ops/s
+[info] # Warmup Iteration   8: 402.815 ops/s
+[info] # Warmup Iteration   9: 413.395 ops/s
+[info] # Warmup Iteration  10: 407.627 ops/s
+[info] Iteration   1: 401.617 ops/s
+[info] Iteration   2: 418.097 ops/s
+[info] Iteration   3: 407.743 ops/s
+[info] Iteration   4: 409.340 ops/s
+[info] Iteration   5: 400.596 ops/s
+[info] Iteration   6: 405.953 ops/s
+[info] Iteration   7: 419.551 ops/s
+[info] Iteration   8: 409.029 ops/s
+[info] Iteration   9: 414.896 ops/s
+[info] Iteration  10: 416.727 ops/s
+[info] Result "kyo.bench.arena.ForkChainedBench.forkZIO":
+[info]   410.355 ±(99.9%) 10.158 ops/s [Average]
+[info]   (min, avg, max) = (400.596, 410.355, 419.551), stdev = 6.719
+[info]   CI (99.9%): [400.197, 420.513] (assumes normal distribution)
+[info] # Run complete. Total time: 00:01:44
+[info] REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+[info] why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+[info] experiments, perform baseline and negative tests that provide experimental control, make sure
+[info] the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+[info] Do not assume the numbers tell you what you want them to tell.
+[info] NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+[info] extra caution when trusting the results, look into the generated code to check the benchmark still
+[info] works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+[info] different JVMs are already problematic, the performance difference caused by different Blackhole
+[info] modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+[info] Benchmark                    Mode  Cnt     Score    Error  Units
+[info] ForkChainedBench.forkCats   thrpt   10   788.350 ± 11.585  ops/s
+[info] ForkChainedBench.forkKyo    thrpt   10  1018.942 ±  6.848  ops/s
+[info] ForkChainedBench.forkOx     thrpt   10    66.070 ±  5.565  ops/s
+[info] ForkChainedBench.forkPekko  thrpt   10   312.897 ± 27.243  ops/s
+[info] ForkChainedBench.forkZIO    thrpt   10   410.355 ± 10.158  ops/s
+[success] Total time: 109 s (0:01:49.0), completed Jul 23, 2025, 2:03:09 PM
+Completed at: śro 23 lip 14:03:09 2025 CEST

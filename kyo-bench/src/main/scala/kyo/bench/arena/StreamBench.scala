@@ -32,4 +32,24 @@ class StreamBench extends ArenaBench.SyncAndFork(25000000):
             .runSum
     end zioBench
 
+    override def oxBench() =
+        import ox.flow.*
+
+        Flow.fromIterable(seq)
+            .filter(_ % 2 == 0)
+            .map(_ + 1)
+            .runFold(0)(_ + _)
+    end oxBench
+
+    import org.apache.pekko.actor.ActorSystem
+    given system: ActorSystem = ActorSystem("StreamBench")
+    override def pekkoBench() =
+        import org.apache.pekko.stream.scaladsl.Source
+
+        Source.fromIterator(() => seq.iterator)
+            .filter(_ % 2 == 0)
+            .map(_ + 1)
+            .runFold(0)(_ + _)
+    end pekkoBench
+
 end StreamBench

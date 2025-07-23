@@ -35,4 +35,23 @@ class BroadFlatMapBench extends ArenaBench.SyncAndFork(BigInt(610)):
         zioFib(depth)
     end zioBench
 
+    override def oxBench() =
+        def oxFib(n: Int): BigInt =
+            if n <= 1 then BigInt(n)
+            else oxFib(n - 1) + oxFib(n - 2)
+
+        oxFib(depth)
+    end oxBench
+
+    override def pekkoBench() =
+        import scala.concurrent.ExecutionContext.Implicits.global
+        import scala.concurrent.Future
+
+        def pekkoFib(n: Int): Future[BigInt] =
+            if n <= 1 then Future.successful(BigInt(n))
+            else pekkoFib(n - 1).flatMap(a => pekkoFib(n - 2).flatMap(b => Future.successful(a + b)))
+
+        pekkoFib(depth)
+    end pekkoBench
+
 end BroadFlatMapBench

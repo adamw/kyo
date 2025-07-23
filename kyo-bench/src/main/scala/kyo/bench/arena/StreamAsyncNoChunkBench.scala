@@ -1,12 +1,14 @@
 package kyo.bench.arena
 
-class StreamAsyncBench extends ArenaBench.ForkOnly(()):
+class StreamAsyncNoChunkBench extends ArenaBench.ForkOnly(()):
     val seq = (0 until 10000).toVector
 
     def catsBench() =
         import cats.effect.*
         import fs2.*
         Stream.emits(seq)
+            .chunkLimit(1)
+            .unchunks
             .parEvalMap(6)(v => IO(v + 1))
             .compile
             .drain
@@ -14,7 +16,7 @@ class StreamAsyncBench extends ArenaBench.ForkOnly(()):
 
     override def kyoBenchFiber() =
         import kyo.*
-        Stream.init(seq)
+        Stream.init(seq, chunkSize = 1)
             .mapPar(6)(v => Sync.defer(v + 1))
             .discard
     end kyoBenchFiber
@@ -22,7 +24,7 @@ class StreamAsyncBench extends ArenaBench.ForkOnly(()):
     def zioBench() =
         import zio.*
         import zio.stream.*
-        ZStream.fromIterable(seq)
+        ZStream.fromIterable(seq, chunkSize = 1)
             .mapZIOPar(6)(v => ZIO.succeed(v + 1))
             .runDrain
             .unit
@@ -37,7 +39,7 @@ class StreamAsyncBench extends ArenaBench.ForkOnly(()):
     end oxBench
 
     import org.apache.pekko.actor.ActorSystem
-    given system: ActorSystem = ActorSystem("StreamAsyncBench")
+    given system: ActorSystem = ActorSystem("StreamAsyncNoChunkBench")
     override def pekkoBench() =
         import org.apache.pekko.stream.scaladsl.Source
         import scala.concurrent.Future
@@ -49,4 +51,4 @@ class StreamAsyncBench extends ArenaBench.ForkOnly(()):
             .map(_ => ())
     end pekkoBench
 
-end StreamAsyncBench
+end StreamAsyncNoChunkBench

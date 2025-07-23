@@ -81,6 +81,18 @@ object WarmupJITProfile:
     class ZIOForkWarmup extends ForkWarmup:
         def runFork[A](bench: Fork[A]) = bench.forkZIO(this)
 
+    class OxSyncWarmup extends SyncWarmup:
+        def runSync[A](bench: SyncAndFork[A]) = bench.syncOx(this)
+
+    class OxForkWarmup extends ForkWarmup:
+        def runFork[A](bench: Fork[A]) = bench.forkOx(this)
+
+    class PekkoSyncWarmup extends SyncWarmup:
+        def runSync[A](bench: SyncAndFork[A]) = bench.syncPekko(this)
+
+    class PekkoForkWarmup extends ForkWarmup:
+        def runFork[A](bench: Fork[A]) = bench.forkPekko(this)
+
     def warmupSeconds = System.getProperty("warmupJITProfileSeconds", "0").toInt
 
     val warmupThreads = Runtime.getRuntime().availableProcessors()

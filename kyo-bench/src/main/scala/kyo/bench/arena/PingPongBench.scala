@@ -91,4 +91,33 @@ class PingPongBench extends ArenaBench.ForkOnly(()):
         yield ()
         end for
     end zioBench
+
+    override def oxBench() =
+        import ox.*
+        import ox.channels.Channel
+        import java.util.concurrent.atomic.AtomicInteger
+
+        def iterate(done: Channel[Unit], n: Int)(using Ox): Unit =
+            val ref  = new AtomicInteger(n)
+            val chan = Channel.buffered[Unit](1)
+            def effect =
+                forkDiscard(chan.send(()))
+                chan.receive()
+                if ref.decrementAndGet() == 1 then done.send(())
+            end effect
+
+            (1 to depth).foreach(_ => fork(effect))
+        end iterate
+
+        supervised:
+            val done = Channel.buffered[Unit](1)
+            forkDiscard(iterate(done, depth))
+            done.receive()
+    end oxBench
+
+    override def pekkoBench() =
+        import scala.concurrent.Future
+        import scala.concurrent.ExecutionContext.Implicits.global
+        Future(Thread.sleep(1))
+    end pekkoBench
 end PingPongBench

@@ -41,4 +41,32 @@ class SemaphoreBench extends ArenaBench.ForkOnly(()):
         Semaphore.make(1).flatMap(loop(_, 0))
     end zioBench
 
+    override def oxBench() =
+        import ox.*
+        import java.util.concurrent.Semaphore
+
+        def loop(s: Semaphore, i: Int): Unit =
+            if i >= depth then ()
+            else
+                s.acquire()
+                s.release()
+                loop(s, i + 1)
+
+        loop(new Semaphore(1), 0)
+    end oxBench
+
+    override def pekkoBench() =
+        import scala.concurrent.ExecutionContext.Implicits.global
+        import scala.concurrent.{blocking, Future}
+        import java.util.concurrent.Semaphore
+
+        def loop(s: Semaphore, i: Int): Future[Unit] =
+            if i >= depth then
+                Future.unit
+            else
+                Future(blocking(s.acquire())).flatMap(_ => Future(blocking(s.release()))).flatMap(_ => loop(s, i + 1))
+
+        loop(new Semaphore(1), 0)
+    end pekkoBench
+
 end SemaphoreBench

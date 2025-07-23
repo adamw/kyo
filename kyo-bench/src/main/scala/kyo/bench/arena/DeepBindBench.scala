@@ -40,4 +40,20 @@ class DeepBindBench extends ArenaBench.SyncAndFork(()):
             }
         loop(0)
     end zioBench
+
+    override def oxBench() =
+        def loop(i: Int): Unit = if i > depth then () else loop(i + 1)
+        loop(0)
+    end oxBench
+
+    override def pekkoBench() =
+        import scala.concurrent.ExecutionContext.Implicits.global
+        import scala.concurrent.Future
+
+        def loop(i: Int): Future[Unit] =
+            Future.unit.flatMap { _ =>
+                if i > depth then Future.unit else loop(i + 1)
+            }
+        loop(0)
+    end pekkoBench
 end DeepBindBench
