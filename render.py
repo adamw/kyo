@@ -123,7 +123,16 @@ benchmark_inputs = {
 [info] StreamBench.syncOx     thrpt   10  28023.329 ± 176.337  ops/s
 [info] StreamBench.syncPekko  thrpt   10   2057.335 ±   9.219  ops/s
 [info] StreamBench.syncZIO    thrpt   10   8395.988 ± 107.166  ops/s
+    """,
+    "HttpClientBench": """
+[info] Benchmark                   Mode  Cnt      Score      Error  Units
+[info] HttpClientBench.forkCats   thrpt   10   9654.389 ±  307.599  ops/s
+[info] HttpClientBench.forkKyo    thrpt   10  15354.044 ± 1234.165  ops/s
+[info] HttpClientBench.forkOx     thrpt   10  13418.086 ±  742.933  ops/s
+[info] HttpClientBench.forkPekko  thrpt   10   9742.537 ± 1151.468  ops/s
+[info] HttpClientBench.forkZIO    thrpt   10  10113.894 ±  647.379  ops/s
     """
+    
 }
 
 # Directory to store output charts

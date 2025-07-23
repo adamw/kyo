@@ -51,4 +51,21 @@ class HttpClientBench extends ArenaBench.ForkOnly("pong"):
             .asInstanceOf[UIO[String]]
     end zioBench
 
+    override def oxBench() =
+        import sttp.client4.quick.*
+        quickRequest.get(uri"$url").send().body
+    end oxBench
+
+    import org.apache.pekko.actor.ActorSystem
+    given system: ActorSystem = ActorSystem("HttpClientBench")
+
+    override def pekkoBench() =
+        import org.apache.pekko.http.scaladsl.Http
+        import org.apache.pekko.http.scaladsl.model.*
+        import org.apache.pekko.stream.scaladsl.*
+        import org.apache.pekko.util.ByteString
+        import system.dispatcher
+        Http().singleRequest(HttpRequest(uri = url)).flatMap(_.entity.dataBytes.runFold(ByteString.empty)(_ ++ _).map(_.utf8String))
+    end pekkoBench
+
 end HttpClientBench

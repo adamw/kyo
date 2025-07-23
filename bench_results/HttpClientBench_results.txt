@@ -1,0 +1,1182 @@
+Command: sbt "kyo-bench/jmh:run HttpClientBench -wi 10 -i 10 -f 1 -t 1 -r 1 -w 1"
+Started at: śro 23 lip 18:45:59 2025 CEST
+----------------------------------------
+NOTE: Picked up JDK_JAVA_OPTIONS: --enable-native-access=ALL-UNNAMED
+NOTE: Picked up JDK_JAVA_OPTIONS: --enable-native-access=ALL-UNNAMED
+[info] welcome to sbt 1.11.2 (Azul Systems, Inc. Java 21.0.8)
+[info] loading settings for project global-plugins from idea.sbt, sbt-updates.sbt...
+[info] loading global plugins from /Users/adamw/.sbt/1.0/plugins
+[info] loading settings for project kyo-build-build-build from metals.sbt...
+[info] loading project definition from /Users/adamw/projects/kyo/project/project/project
+[info] loading settings for project kyo-build-build from metals.sbt...
+[info] loading project definition from /Users/adamw/projects/kyo/project/project
+[success] Generated .bloop/kyo-build-build.json
+[success] Total time: 1 s, completed Jul 23, 2025, 6:46:03 PM
+[info] loading settings for project kyo-build from metals.sbt, plugins.sbt...
+[info] loading project definition from /Users/adamw/projects/kyo/project
+[success] Generated .bloop/kyo-build.json
+[success] Total time: 1 s, completed Jul 23, 2025, 6:46:04 PM
+[info] loading settings for project kyoJVM from build.sbt...
+[info] resolving key references (75227 settings) ...
+[info] set current project to kyoJVM (in build file:/Users/adamw/projects/kyo/)
+[warn] there are 2 keys that are not used by any other settings/tasks:
+[warn]  
+[warn] * kyo-examples / mimaFailOnProblem
+[warn]   +- /Users/adamw/projects/kyo/build.sbt:732
+[warn] * kyo-examples / mimaPreviousArtifacts
+[warn]   +- /Users/adamw/projects/kyo/build.sbt:730
+[warn]  
+[warn] note: a setting might still be used by a command; to exclude a key from this `lintUnused` check
+[warn] either append it to `Global / excludeLintKeys` or call .withRank(KeyRanks.Invisible) on the key
+[info] set current project to kyoJVM (in build file:/Users/adamw/projects/kyo/)
+[warn] sbt 0.13 shell syntax is deprecated; use slash syntax instead: kyo-bench / Jmh / run
+[info] scalafmt: Formatting 1 Scala sources (/Users/adamw/projects/kyo/kyo-bench/.jvm)...
+[warn] multiple main classes detected: run 'show discoveredMainClasses' to see the list
+[info] running (fork) org.openjdk.jmh.Main HttpClientBench -wi 10 -i 10 -f 1 -t 1 -r 1 -w 1
+[error] NOTE: Picked up JDK_JAVA_OPTIONS: --enable-native-access=ALL-UNNAMED
+[info] # JMH version: 1.37
+[info] # VM version: JDK 21.0.8, OpenJDK 64-Bit Server VM, 21.0.8+9-LTS
+[info] # VM invoker: /Users/adamw/.sdkman/candidates/java/21.0.8-zulu/zulu-21.jdk/Contents/Home/bin/java
+[info] # VM options: --add-opens=java.base/java.lang=ALL-UNNAMED -XX:+UnlockExperimentalVMOptions -XX:-DoJVMTIVirtualThreadTransitions -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+[info] # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+[info] # Warmup: 10 iterations, 1 s each
+[info] # Measurement: 10 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: kyo.bench.arena.HttpClientBench.forkCats
+[info] # Run progress: 0.00% complete, ETA 00:01:40
+[info] # Fork: 1 of 1
+[info] NOTE: Picked up JDK_JAVA_OPTIONS: --enable-native-access=ALL-UNNAMED
+[info] # Warmup Iteration   1: TestHttpServer(port=8888): forking
+[error] [TestHttpServer] NOTE: Picked up JDK_JAVA_OPTIONS: --enable-native-access=ALL-UNNAMED
+[info] TestHttpServer(port=8888): Server is ready
+[info] TestHttpServer(port=8888): forked
+[info] [TestHttpServer] TestHttpServer(port=8888): starting
+[error] [TestHttpServer] SLF4J(W): No SLF4J providers were found.
+[error] [TestHttpServer] SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+[error] [TestHttpServer] SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+[info] JIT profile warmup disabled
+[error] SLF4J(W): No SLF4J providers were found.
+[error] SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+[error] SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+[error] [TestHttpServer] Jul 23, 2025 6:46:13 PM io.netty.resolver.dns.DnsServerAddressStreamProviders <clinit>
+[error] [TestHttpServer] WARNING: Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+[info] [TestHttpServer] TestHttpServer(port=8888): Failed to start server: java.net.BindException: Address already in use
+[info] [TestHttpServer] TestHttpServer(port=8888): Deployed 1
+[info] 188.932 ops/s
+[info] # Warmup Iteration   2: 1766.374 ops/s
+[info] # Warmup Iteration   3: 4032.594 ops/s
+[info] # Warmup Iteration   4: 5994.033 ops/s
+[info] # Warmup Iteration   5: 7583.376 ops/s
+[info] # Warmup Iteration   6: 8386.715 ops/s
+[info] # Warmup Iteration   7: 10009.229 ops/s
+[info] # Warmup Iteration   8: 9941.884 ops/s
+[info] # Warmup Iteration   9: 9851.064 ops/s
+[info] # Warmup Iteration  10: 9695.368 ops/s
+[info] Iteration   1: 9452.958 ops/s
+[info] Iteration   2: 9677.444 ops/s
+[info] Iteration   3: 9604.889 ops/s
+[info] Iteration   4: 9534.868 ops/s
+[info] Iteration   5: 9395.736 ops/s
+[info] Iteration   6: 9715.197 ops/s
+[info] Iteration   7: 9993.189 ops/s
+[info] Iteration   8: 9459.456 ops/s
+[info] Iteration   9: 9928.489 ops/s
+[info] Iteration  10: 9781.665 ops/s
+[info] TestHttpServer(port=8888): stopping
+[info] Result "kyo.bench.arena.HttpClientBench.forkCats":
+[info]   9654.389 ±(99.9%) 307.599 ops/s [Average]
+[info]   (min, avg, max) = (9395.736, 9654.389, 9993.189), stdev = 203.458
+[info]   CI (99.9%): [9346.790, 9961.988] (assumes normal distribution)
+[info] # JMH version: 1.37
+[info] # VM version: JDK 21.0.8, OpenJDK 64-Bit Server VM, 21.0.8+9-LTS
+[info] # VM invoker: /Users/adamw/.sdkman/candidates/java/21.0.8-zulu/zulu-21.jdk/Contents/Home/bin/java
+[info] # VM options: --add-opens=java.base/java.lang=ALL-UNNAMED -XX:+UnlockExperimentalVMOptions -XX:-DoJVMTIVirtualThreadTransitions -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+[info] # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+[info] # Warmup: 10 iterations, 1 s each
+[info] # Measurement: 10 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: kyo.bench.arena.HttpClientBench.forkKyo
+[info] # Run progress: 20.00% complete, ETA 00:01:24
+[info] # Fork: 1 of 1
+[info] NOTE: Picked up JDK_JAVA_OPTIONS: --enable-native-access=ALL-UNNAMED
+[info] # Warmup Iteration   1: TestHttpServer(port=8888): forking
+[error] [TestHttpServer] NOTE: Picked up JDK_JAVA_OPTIONS: --enable-native-access=ALL-UNNAMED
+[info] TestHttpServer(port=8888): Server is ready
+[info] TestHttpServer(port=8888): forked
+[info] [TestHttpServer] TestHttpServer(port=8888): starting
+[error] [TestHttpServer] SLF4J(W): No SLF4J providers were found.
+[error] [TestHttpServer] SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+[error] [TestHttpServer] SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+[info] JIT profile warmup disabled
+[error] [TestHttpServer] Jul 23, 2025 6:46:34 PM io.netty.resolver.dns.DnsServerAddressStreamProviders <clinit>
+[error] [TestHttpServer] WARNING: Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+[info] [TestHttpServer] TestHttpServer(port=8888): Failed to start server: java.net.BindException: Address already in use
+[info] [TestHttpServer] TestHttpServer(port=8888): Deployed 1
+[info] 1106.505 ops/s
+[info] # Warmup Iteration   2: 4719.836 ops/s
+[info] # Warmup Iteration   3: 8472.430 ops/s
+[info] # Warmup Iteration   4: 11571.586 ops/s
+[info] # Warmup Iteration   5: 14614.719 ops/s
+[info] # Warmup Iteration   6: 15537.910 ops/s
+[info] # Warmup Iteration   7: 14771.437 ops/s
+[info] # Warmup Iteration   8: 15316.722 ops/s
+[info] # Warmup Iteration   9: 15458.954 ops/s
+[info] # Warmup Iteration  10: 15692.954 ops/s
+[info] Iteration   1: 13446.301 ops/s
+[info] Iteration   2: 14376.458 ops/s
+[info] Iteration   3: 15810.000 ops/s
+[info] Iteration   4: 15539.166 ops/s
+[info] Iteration   5: 15922.874 ops/s
+[info] Iteration   6: 15940.564 ops/s
+[info] Iteration   7: 15456.167 ops/s
+[info] Iteration   8: 15668.420 ops/s
+[info] Iteration   9: 15409.848 ops/s
+[info] Iteration  10: 15970.641 ops/s
+[info] TestHttpServer(port=8888): stopping
+[info] Result "kyo.bench.arena.HttpClientBench.forkKyo":
+[info]   15354.044 ±(99.9%) 1234.165 ops/s [Average]
+[info]   (min, avg, max) = (13446.301, 15354.044, 15970.641), stdev = 816.324
+[info]   CI (99.9%): [14119.878, 16588.209] (assumes normal distribution)
+[info] # JMH version: 1.37
+[info] # VM version: JDK 21.0.8, OpenJDK 64-Bit Server VM, 21.0.8+9-LTS
+[info] # VM invoker: /Users/adamw/.sdkman/candidates/java/21.0.8-zulu/zulu-21.jdk/Contents/Home/bin/java
+[info] # VM options: --add-opens=java.base/java.lang=ALL-UNNAMED -XX:+UnlockExperimentalVMOptions -XX:-DoJVMTIVirtualThreadTransitions -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+[info] # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+[info] # Warmup: 10 iterations, 1 s each
+[info] # Measurement: 10 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: kyo.bench.arena.HttpClientBench.forkOx
+[info] # Run progress: 40.00% complete, ETA 00:01:03
+[info] # Fork: 1 of 1
+[info] NOTE: Picked up JDK_JAVA_OPTIONS: --enable-native-access=ALL-UNNAMED
+[info] # Warmup Iteration   1: TestHttpServer(port=8888): forking
+[error] [TestHttpServer] NOTE: Picked up JDK_JAVA_OPTIONS: --enable-native-access=ALL-UNNAMED
+[info] TestHttpServer(port=8888): Server is ready
+[info] TestHttpServer(port=8888): forked
+[info] [TestHttpServer] TestHttpServer(port=8888): starting
+[error] [TestHttpServer] SLF4J(W): No SLF4J providers were found.
+[error] [TestHttpServer] SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+[error] [TestHttpServer] SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+[info] JIT profile warmup disabled
+[error] [TestHttpServer] Jul 23, 2025 6:46:55 PM io.netty.resolver.dns.DnsServerAddressStreamProviders <clinit>
+[error] [TestHttpServer] WARNING: Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+[info] [TestHttpServer] TestHttpServer(port=8888): Deployed 1
+[info] [TestHttpServer] TestHttpServer(port=8888): Failed to start server: java.net.BindException: Address already in use
+[info] 1365.095 ops/s
+[info] # Warmup Iteration   2: 4649.142 ops/s
+[info] # Warmup Iteration   3: 8267.679 ops/s
+[info] # Warmup Iteration   4: 9826.487 ops/s
+[info] # Warmup Iteration   5: 12664.897 ops/s
+[info] # Warmup Iteration   6: 12365.125 ops/s
+[info] # Warmup Iteration   7: 13002.498 ops/s
+[info] # Warmup Iteration   8: 13337.998 ops/s
+[info] # Warmup Iteration   9: 13578.420 ops/s
+[info] # Warmup Iteration  10: 13482.443 ops/s
+[info] Iteration   1: 13086.936 ops/s
+[info] Iteration   2: 13428.512 ops/s
+[info] Iteration   3: 13570.989 ops/s
+[info] Iteration   4: 13950.248 ops/s
+[info] Iteration   5: 13824.616 ops/s
+[info] Iteration   6: 13306.595 ops/s
+[info] Iteration   7: 13700.657 ops/s
+[info] Iteration   8: 12216.768 ops/s
+[info] Iteration   9: 13441.434 ops/s
+[info] Iteration  10: 13654.102 ops/s
+[info] TestHttpServer(port=8888): stopping
+[info] Result "kyo.bench.arena.HttpClientBench.forkOx":
+[info]   13418.086 ±(99.9%) 742.933 ops/s [Average]
+[info]   (min, avg, max) = (12216.768, 13418.086, 13950.248), stdev = 491.404
+[info]   CI (99.9%): [12675.153, 14161.018] (assumes normal distribution)
+[info] # JMH version: 1.37
+[info] # VM version: JDK 21.0.8, OpenJDK 64-Bit Server VM, 21.0.8+9-LTS
+[info] # VM invoker: /Users/adamw/.sdkman/candidates/java/21.0.8-zulu/zulu-21.jdk/Contents/Home/bin/java
+[info] # VM options: --add-opens=java.base/java.lang=ALL-UNNAMED -XX:+UnlockExperimentalVMOptions -XX:-DoJVMTIVirtualThreadTransitions -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+[info] # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+[info] # Warmup: 10 iterations, 1 s each
+[info] # Measurement: 10 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: kyo.bench.arena.HttpClientBench.forkPekko
+[info] # Run progress: 60.00% complete, ETA 00:00:42
+[info] # Fork: 1 of 1
+[info] NOTE: Picked up JDK_JAVA_OPTIONS: --enable-native-access=ALL-UNNAMED
+[info] # Warmup Iteration   1: TestHttpServer(port=8888): forking
+[error] [TestHttpServer] NOTE: Picked up JDK_JAVA_OPTIONS: --enable-native-access=ALL-UNNAMED
+[info] TestHttpServer(port=8888): Server is ready
+[info] TestHttpServer(port=8888): forked
+[info] [TestHttpServer] TestHttpServer(port=8888): starting
+[error] [TestHttpServer] SLF4J(W): No SLF4J providers were found.
+[error] [TestHttpServer] SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+[error] [TestHttpServer] SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+[info] JIT profile warmup disabled
+[error] [TestHttpServer] Jul 23, 2025 6:47:16 PM io.netty.resolver.dns.DnsServerAddressStreamProviders <clinit>
+[error] [TestHttpServer] WARNING: Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+[info] [TestHttpServer] TestHttpServer(port=8888): Failed to start server: java.net.BindException: Address already in use
+[info] [TestHttpServer] TestHttpServer(port=8888): Deployed 1
+[info] 804.730 ops/s
+[info] # Warmup Iteration   2: 5792.527 ops/s
+[info] # Warmup Iteration   3: 8022.573 ops/s
+[info] # Warmup Iteration   4: 9049.357 ops/s
+[info] # Warmup Iteration   5: 8640.991 ops/s
+[info] # Warmup Iteration   6: 7484.845 ops/s
+[info] # Warmup Iteration   7: 9427.146 ops/s
+[info] # Warmup Iteration   8: 9473.476 ops/s
+[info] # Warmup Iteration   9: 9362.336 ops/s
+[info] # Warmup Iteration  10: 8857.106 ops/s
+[info] Iteration   1: 9567.888 ops/s
+[info] Iteration   2: 9587.691 ops/s
+[info] Iteration   3: 9560.236 ops/s
+[info] Iteration   4: 9794.051 ops/s
+[info] Iteration   5: 9123.013 ops/s
+[info] Iteration   6: 9668.286 ops/s
+[info] Iteration   7: 11808.694 ops/s
+[info] Iteration   8: 9751.232 ops/s
+[info] Iteration   9: 9436.985 ops/s
+[info] Iteration  10: 9127.297 ops/s
+[info] <JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 24 seconds more...>
+[info] Non-finished threads:
+[info] Thread[#41,HttpClientBench-scheduler-1,5,main]
+[info]   at java.base@21.0.8/java.lang.Thread.sleep0(Native Method)
+[info]   at java.base@21.0.8/java.lang.Thread.sleep(Thread.java:509)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:121)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.nextTick(LightArrayRevolverScheduler.scala:314)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.run(LightArrayRevolverScheduler.scala:284)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#48,HttpClientBench-pekko.actor.default-dispatcher-8,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#58,HttpClientBench-pekko.actor.default-dispatcher-17,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#52,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-12,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#51,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-11,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#44,HttpClientBench-pekko.actor.default-dispatcher-4,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:449)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1891)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#46,HttpClientBench-pekko.actor.internal-dispatcher-6,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#47,HttpClientBench-pekko.io.pinned-dispatcher-7,5,main]
+[info]   at java.base@21.0.8/sun.nio.ch.KQueue.poll(Native Method)
+[info]   at java.base@21.0.8/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:125)
+[info]   at java.base@21.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+[info]   at java.base@21.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:142)
+[info]   at app//org.apache.pekko.io.SelectionHandler$ChannelRegistryImpl$$anon$6.tryRun(SelectionHandler.scala:163)
+[info]   at app//org.apache.pekko.io.SelectionHandler$ChannelRegistryImpl$Task.run(SelectionHandler.scala:303)
+[info]   at app//org.apache.pekko.io.SelectionHandler$ChannelRegistryImpl$$anon$6.run(SelectionHandler.scala:196)
+[info]   at app//org.apache.pekko.util.SerializedSuspendableExecutionContext.run$1(SerializedSuspendableExecutionContext.scala:83)
+[info]   at app//org.apache.pekko.util.SerializedSuspendableExecutionContext.run(SerializedSuspendableExecutionContext.scala:88)
+[info]   at app//org.apache.pekko.dispatch.TaskInvocation.run(AbstractDispatcher.scala:59)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#43,HttpClientBench-pekko.actor.internal-dispatcher-3,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#53,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-13,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#55,HttpClientBench-pekko.actor.default-dispatcher-15,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#56,HttpClientBench-pekko.actor.default-dispatcher-16,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#42,HttpClientBench-pekko.actor.internal-dispatcher-2,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:449)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1891)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#45,HttpClientBench-pekko.actor.default-dispatcher-5,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#50,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-10,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#49,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-9,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#57,HttpClientBench-pekko.actor.default-dispatcher-18,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#54,HttpClientBench-pekko.actor.default-dispatcher-14,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#59,DestroyJavaVM,5,main]
+[info] <JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 19 seconds more...>
+[info] Non-finished threads:
+[info] Thread[#41,HttpClientBench-scheduler-1,5,main]
+[info]   at java.base@21.0.8/java.lang.Thread.sleep0(Native Method)
+[info]   at java.base@21.0.8/java.lang.Thread.sleep(Thread.java:509)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:121)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.nextTick(LightArrayRevolverScheduler.scala:314)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.run(LightArrayRevolverScheduler.scala:284)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#48,HttpClientBench-pekko.actor.default-dispatcher-8,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#58,HttpClientBench-pekko.actor.default-dispatcher-17,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#52,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-12,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#51,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-11,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#44,HttpClientBench-pekko.actor.default-dispatcher-4,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:449)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1891)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#46,HttpClientBench-pekko.actor.internal-dispatcher-6,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#47,HttpClientBench-pekko.io.pinned-dispatcher-7,5,main]
+[info]   at java.base@21.0.8/sun.nio.ch.KQueue.poll(Native Method)
+[info]   at java.base@21.0.8/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:125)
+[info]   at java.base@21.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+[info]   at java.base@21.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:142)
+[info]   at app//org.apache.pekko.io.SelectionHandler$ChannelRegistryImpl$$anon$6.tryRun(SelectionHandler.scala:163)
+[info]   at app//org.apache.pekko.io.SelectionHandler$ChannelRegistryImpl$Task.run(SelectionHandler.scala:303)
+[info]   at app//org.apache.pekko.io.SelectionHandler$ChannelRegistryImpl$$anon$6.run(SelectionHandler.scala:196)
+[info]   at app//org.apache.pekko.util.SerializedSuspendableExecutionContext.run$1(SerializedSuspendableExecutionContext.scala:83)
+[info]   at app//org.apache.pekko.util.SerializedSuspendableExecutionContext.run(SerializedSuspendableExecutionContext.scala:88)
+[info]   at app//org.apache.pekko.dispatch.TaskInvocation.run(AbstractDispatcher.scala:59)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#43,HttpClientBench-pekko.actor.internal-dispatcher-3,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#53,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-13,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#55,HttpClientBench-pekko.actor.default-dispatcher-15,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#56,HttpClientBench-pekko.actor.default-dispatcher-16,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#42,HttpClientBench-pekko.actor.internal-dispatcher-2,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:449)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1891)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#45,HttpClientBench-pekko.actor.default-dispatcher-5,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#50,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-10,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#49,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-9,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#57,HttpClientBench-pekko.actor.default-dispatcher-18,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#54,HttpClientBench-pekko.actor.default-dispatcher-14,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#59,DestroyJavaVM,5,main]
+[info] <JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 14 seconds more...>
+[info] Non-finished threads:
+[info] Thread[#41,HttpClientBench-scheduler-1,5,main]
+[info]   at java.base@21.0.8/java.lang.Thread.sleep0(Native Method)
+[info]   at java.base@21.0.8/java.lang.Thread.sleep(Thread.java:509)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:121)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.nextTick(LightArrayRevolverScheduler.scala:314)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.run(LightArrayRevolverScheduler.scala:284)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#48,HttpClientBench-pekko.actor.default-dispatcher-8,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#58,HttpClientBench-pekko.actor.default-dispatcher-17,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#52,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-12,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#51,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-11,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#44,HttpClientBench-pekko.actor.default-dispatcher-4,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:449)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1891)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#46,HttpClientBench-pekko.actor.internal-dispatcher-6,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#47,HttpClientBench-pekko.io.pinned-dispatcher-7,5,main]
+[info]   at java.base@21.0.8/sun.nio.ch.KQueue.poll(Native Method)
+[info]   at java.base@21.0.8/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:125)
+[info]   at java.base@21.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+[info]   at java.base@21.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:142)
+[info]   at app//org.apache.pekko.io.SelectionHandler$ChannelRegistryImpl$$anon$6.tryRun(SelectionHandler.scala:163)
+[info]   at app//org.apache.pekko.io.SelectionHandler$ChannelRegistryImpl$Task.run(SelectionHandler.scala:303)
+[info]   at app//org.apache.pekko.io.SelectionHandler$ChannelRegistryImpl$$anon$6.run(SelectionHandler.scala:196)
+[info]   at app//org.apache.pekko.util.SerializedSuspendableExecutionContext.run$1(SerializedSuspendableExecutionContext.scala:83)
+[info]   at app//org.apache.pekko.util.SerializedSuspendableExecutionContext.run(SerializedSuspendableExecutionContext.scala:88)
+[info]   at app//org.apache.pekko.dispatch.TaskInvocation.run(AbstractDispatcher.scala:59)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#43,HttpClientBench-pekko.actor.internal-dispatcher-3,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#53,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-13,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#55,HttpClientBench-pekko.actor.default-dispatcher-15,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#56,HttpClientBench-pekko.actor.default-dispatcher-16,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#42,HttpClientBench-pekko.actor.internal-dispatcher-2,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:449)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1891)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#45,HttpClientBench-pekko.actor.default-dispatcher-5,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#50,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-10,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#49,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-9,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#57,HttpClientBench-pekko.actor.default-dispatcher-18,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#54,HttpClientBench-pekko.actor.default-dispatcher-14,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#59,DestroyJavaVM,5,main]
+[info] <JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 9 seconds more...>
+[info] Non-finished threads:
+[info] Thread[#41,HttpClientBench-scheduler-1,5,main]
+[info]   at java.base@21.0.8/java.lang.Thread.sleep0(Native Method)
+[info]   at java.base@21.0.8/java.lang.Thread.sleep(Thread.java:509)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:121)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.nextTick(LightArrayRevolverScheduler.scala:314)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.run(LightArrayRevolverScheduler.scala:284)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#48,HttpClientBench-pekko.actor.default-dispatcher-8,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#58,HttpClientBench-pekko.actor.default-dispatcher-17,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#52,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-12,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#51,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-11,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#44,HttpClientBench-pekko.actor.default-dispatcher-4,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:449)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1891)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#46,HttpClientBench-pekko.actor.internal-dispatcher-6,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#47,HttpClientBench-pekko.io.pinned-dispatcher-7,5,main]
+[info]   at java.base@21.0.8/sun.nio.ch.KQueue.poll(Native Method)
+[info]   at java.base@21.0.8/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:125)
+[info]   at java.base@21.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+[info]   at java.base@21.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:142)
+[info]   at app//org.apache.pekko.io.SelectionHandler$ChannelRegistryImpl$$anon$6.tryRun(SelectionHandler.scala:163)
+[info]   at app//org.apache.pekko.io.SelectionHandler$ChannelRegistryImpl$Task.run(SelectionHandler.scala:303)
+[info]   at app//org.apache.pekko.io.SelectionHandler$ChannelRegistryImpl$$anon$6.run(SelectionHandler.scala:196)
+[info]   at app//org.apache.pekko.util.SerializedSuspendableExecutionContext.run$1(SerializedSuspendableExecutionContext.scala:83)
+[info]   at app//org.apache.pekko.util.SerializedSuspendableExecutionContext.run(SerializedSuspendableExecutionContext.scala:88)
+[info]   at app//org.apache.pekko.dispatch.TaskInvocation.run(AbstractDispatcher.scala:59)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#43,HttpClientBench-pekko.actor.internal-dispatcher-3,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#53,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-13,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#55,HttpClientBench-pekko.actor.default-dispatcher-15,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#56,HttpClientBench-pekko.actor.default-dispatcher-16,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#42,HttpClientBench-pekko.actor.internal-dispatcher-2,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:449)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1891)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#45,HttpClientBench-pekko.actor.default-dispatcher-5,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#50,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-10,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#49,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-9,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#57,HttpClientBench-pekko.actor.default-dispatcher-18,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#54,HttpClientBench-pekko.actor.default-dispatcher-14,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#59,DestroyJavaVM,5,main]
+[info] <JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 4 seconds more...>
+[info] Non-finished threads:
+[info] Thread[#41,HttpClientBench-scheduler-1,5,main]
+[info]   at java.base@21.0.8/java.lang.Thread.sleep0(Native Method)
+[info]   at java.base@21.0.8/java.lang.Thread.sleep(Thread.java:509)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:121)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.nextTick(LightArrayRevolverScheduler.scala:314)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.run(LightArrayRevolverScheduler.scala:284)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#48,HttpClientBench-pekko.actor.default-dispatcher-8,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#58,HttpClientBench-pekko.actor.default-dispatcher-17,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#52,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-12,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#51,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-11,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#44,HttpClientBench-pekko.actor.default-dispatcher-4,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:449)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1891)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#46,HttpClientBench-pekko.actor.internal-dispatcher-6,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#47,HttpClientBench-pekko.io.pinned-dispatcher-7,5,main]
+[info]   at java.base@21.0.8/sun.nio.ch.KQueue.poll(Native Method)
+[info]   at java.base@21.0.8/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:125)
+[info]   at java.base@21.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+[info]   at java.base@21.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:142)
+[info]   at app//org.apache.pekko.io.SelectionHandler$ChannelRegistryImpl$$anon$6.tryRun(SelectionHandler.scala:163)
+[info]   at app//org.apache.pekko.io.SelectionHandler$ChannelRegistryImpl$Task.run(SelectionHandler.scala:303)
+[info]   at app//org.apache.pekko.io.SelectionHandler$ChannelRegistryImpl$$anon$6.run(SelectionHandler.scala:196)
+[info]   at app//org.apache.pekko.util.SerializedSuspendableExecutionContext.run$1(SerializedSuspendableExecutionContext.scala:83)
+[info]   at app//org.apache.pekko.util.SerializedSuspendableExecutionContext.run(SerializedSuspendableExecutionContext.scala:88)
+[info]   at app//org.apache.pekko.dispatch.TaskInvocation.run(AbstractDispatcher.scala:59)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#43,HttpClientBench-pekko.actor.internal-dispatcher-3,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#53,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-13,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#55,HttpClientBench-pekko.actor.default-dispatcher-15,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#56,HttpClientBench-pekko.actor.default-dispatcher-16,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#42,HttpClientBench-pekko.actor.internal-dispatcher-2,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:449)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1891)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#45,HttpClientBench-pekko.actor.default-dispatcher-5,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#50,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-10,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#49,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-9,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#57,HttpClientBench-pekko.actor.default-dispatcher-18,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#54,HttpClientBench-pekko.actor.default-dispatcher-14,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#59,DestroyJavaVM,5,main]
+[info] <JMH had finished, but forked VM did not exit, are there stray running threads? Waiting 0 seconds more...>
+[info] Non-finished threads:
+[info] Thread[#41,HttpClientBench-scheduler-1,5,main]
+[info]   at java.base@21.0.8/java.lang.Thread.sleep0(Native Method)
+[info]   at java.base@21.0.8/java.lang.Thread.sleep(Thread.java:509)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:121)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.nextTick(LightArrayRevolverScheduler.scala:314)
+[info]   at app//org.apache.pekko.actor.LightArrayRevolverScheduler$$anon$1.run(LightArrayRevolverScheduler.scala:284)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#48,HttpClientBench-pekko.actor.default-dispatcher-8,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#58,HttpClientBench-pekko.actor.default-dispatcher-17,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#52,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-12,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#51,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-11,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#44,HttpClientBench-pekko.actor.default-dispatcher-4,5,main]
+[info]   at app//org.apache.pekko.actor.dungeon.ChildrenContainer$NormalChildrenContainer.getByRef(ChildrenContainer.scala:130)
+[info]   at app//org.apache.pekko.actor.dungeon.DeathWatch.watchedActorTerminated(DeathWatch.scala:114)
+[info]   at app//org.apache.pekko.actor.dungeon.DeathWatch.watchedActorTerminated$(DeathWatch.scala:23)
+[info]   at app//org.apache.pekko.actor.ActorCell.watchedActorTerminated(ActorCell.scala:420)
+[info]   at app//org.apache.pekko.actor.ActorCell.invokeAll$1(ActorCell.scala:522)
+[info]   at app//org.apache.pekko.actor.ActorCell.systemInvoke(ActorCell.scala:545)
+[info]   at app//org.apache.pekko.dispatch.Mailbox.processAllSystemMessages(Mailbox.scala:297)
+[info]   at app//org.apache.pekko.dispatch.Mailbox.run(Mailbox.scala:232)
+[info]   at app//org.apache.pekko.dispatch.Mailbox.exec(Mailbox.scala:245)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#46,HttpClientBench-pekko.actor.internal-dispatcher-6,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#47,HttpClientBench-pekko.io.pinned-dispatcher-7,5,main]
+[info]   at java.base@21.0.8/sun.nio.ch.KQueue.poll(Native Method)
+[info]   at java.base@21.0.8/sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:125)
+[info]   at java.base@21.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:130)
+[info]   at java.base@21.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:142)
+[info]   at app//org.apache.pekko.io.SelectionHandler$ChannelRegistryImpl$$anon$6.tryRun(SelectionHandler.scala:163)
+[info]   at app//org.apache.pekko.io.SelectionHandler$ChannelRegistryImpl$Task.run(SelectionHandler.scala:303)
+[info]   at app//org.apache.pekko.io.SelectionHandler$ChannelRegistryImpl$$anon$6.run(SelectionHandler.scala:196)
+[info]   at app//org.apache.pekko.util.SerializedSuspendableExecutionContext.run$1(SerializedSuspendableExecutionContext.scala:83)
+[info]   at app//org.apache.pekko.util.SerializedSuspendableExecutionContext.run(SerializedSuspendableExecutionContext.scala:88)
+[info]   at app//org.apache.pekko.dispatch.TaskInvocation.run(AbstractDispatcher.scala:59)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#43,HttpClientBench-pekko.actor.internal-dispatcher-3,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:449)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1891)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#53,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-13,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#55,HttpClientBench-pekko.actor.default-dispatcher-15,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#56,HttpClientBench-pekko.actor.default-dispatcher-16,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#42,HttpClientBench-pekko.actor.internal-dispatcher-2,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#45,HttpClientBench-pekko.actor.default-dispatcher-5,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#50,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-10,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#49,HttpClientBench-pekko.actor.default-blocking-io-dispatcher-9,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+[info]   at java.base@21.0.8/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:460)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+[info]   at java.base@21.0.8/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[info]   at java.base@21.0.8/java.lang.Thread.runWith(Thread.java:1596)
+[info]   at java.base@21.0.8/java.lang.Thread.run(Thread.java:1583)
+[info] Thread[#57,HttpClientBench-pekko.actor.default-dispatcher-18,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#54,HttpClientBench-pekko.actor.default-dispatcher-14,5,main]
+[info]   at java.base@21.0.8/jdk.internal.misc.Unsafe.park(Native Method)
+[info]   at java.base@21.0.8/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:1893)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1809)
+[info]   at java.base@21.0.8/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+[info] Thread[#59,DestroyJavaVM,5,main]
+[info] <shutdown timeout of 30 seconds expired, forcing forked VM to exit>
+[info] Result "kyo.bench.arena.HttpClientBench.forkPekko":
+[info]   9742.537 ±(99.9%) 1151.468 ops/s [Average]
+[info]   (min, avg, max) = (9123.013, 9742.537, 11808.694), stdev = 761.625
+[info]   CI (99.9%): [8591.069, 10894.005] (assumes normal distribution)
+[info] # JMH version: 1.37
+[info] # VM version: JDK 21.0.8, OpenJDK 64-Bit Server VM, 21.0.8+9-LTS
+[info] # VM invoker: /Users/adamw/.sdkman/candidates/java/21.0.8-zulu/zulu-21.jdk/Contents/Home/bin/java
+[info] # VM options: --add-opens=java.base/java.lang=ALL-UNNAMED -XX:+UnlockExperimentalVMOptions -XX:-DoJVMTIVirtualThreadTransitions -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+[info] # Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+[info] # Warmup: 10 iterations, 1 s each
+[info] # Measurement: 10 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: kyo.bench.arena.HttpClientBench.forkZIO
+[info] # Run progress: 80.00% complete, ETA 00:00:28
+[info] # Fork: 1 of 1
+[info] NOTE: Picked up JDK_JAVA_OPTIONS: --enable-native-access=ALL-UNNAMED
+[info] # Warmup Iteration   1: TestHttpServer(port=8888): forking
+[error] [TestHttpServer] NOTE: Picked up JDK_JAVA_OPTIONS: --enable-native-access=ALL-UNNAMED
+[info] TestHttpServer(port=8888): Server is ready
+[info] TestHttpServer(port=8888): forked
+[info] [TestHttpServer] TestHttpServer(port=8888): starting
+[error] [TestHttpServer] SLF4J(W): No SLF4J providers were found.
+[error] [TestHttpServer] SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+[error] [TestHttpServer] SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+[info] JIT profile warmup disabled
+[error] [TestHttpServer] Jul 23, 2025 6:48:08 PM io.netty.resolver.dns.DnsServerAddressStreamProviders <clinit>
+[error] [TestHttpServer] WARNING: Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+[error] SLF4J(W): No SLF4J providers were found.
+[error] SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+[error] SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+[info] [TestHttpServer] TestHttpServer(port=8888): Failed to start server: java.net.BindException: Address already in use
+[info] [TestHttpServer] TestHttpServer(port=8888): Deployed 1
+[info] 0.945 ops/s
+[info] # Warmup Iteration   2: 1187.218 ops/s
+[info] # Warmup Iteration   3: 2970.396 ops/s
+[info] # Warmup Iteration   4: 4428.483 ops/s
+[info] # Warmup Iteration   5: 4901.592 ops/s
+[info] # Warmup Iteration   6: 8241.265 ops/s
+[info] # Warmup Iteration   7: 9764.028 ops/s
+[info] # Warmup Iteration   8: 10271.087 ops/s
+[info] # Warmup Iteration   9: 9955.332 ops/s
+[info] # Warmup Iteration  10: 9491.653 ops/s
+[info] Iteration   1: 9941.328 ops/s
+[info] Iteration   2: 9649.831 ops/s
+[info] Iteration   3: 9920.417 ops/s
+[info] Iteration   4: 9797.696 ops/s
+[info] Iteration   5: 9616.987 ops/s
+[info] Iteration   6: 9851.002 ops/s
+[info] Iteration   7: 10495.368 ops/s
+[info] Iteration   8: 10726.244 ops/s
+[info] Iteration   9: 10656.664 ops/s
+[info] Iteration  10: 10483.402 ops/s
+[info] TestHttpServer(port=8888): stopping
+[info] Result "kyo.bench.arena.HttpClientBench.forkZIO":
+[info]   10113.894 ±(99.9%) 647.379 ops/s [Average]
+[info]   (min, avg, max) = (9616.987, 10113.894, 10726.244), stdev = 428.201
+[info]   CI (99.9%): [9466.515, 10761.273] (assumes normal distribution)
+[info] # Run complete. Total time: 00:02:17
+[info] REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+[info] why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+[info] experiments, perform baseline and negative tests that provide experimental control, make sure
+[info] the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+[info] Do not assume the numbers tell you what you want them to tell.
+[info] NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+[info] extra caution when trusting the results, look into the generated code to check the benchmark still
+[info] works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+[info] different JVMs are already problematic, the performance difference caused by different Blackhole
+[info] modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+[info] Benchmark                   Mode  Cnt      Score      Error  Units
+[info] HttpClientBench.forkCats   thrpt   10   9654.389 ±  307.599  ops/s
+[info] HttpClientBench.forkKyo    thrpt   10  15354.044 ± 1234.165  ops/s
+[info] HttpClientBench.forkOx     thrpt   10  13418.086 ±  742.933  ops/s
+[info] HttpClientBench.forkPekko  thrpt   10   9742.537 ± 1151.468  ops/s
+[info] HttpClientBench.forkZIO    thrpt   10  10113.894 ±  647.379  ops/s
+[success] Total time: 141 s (0:02:21.0), completed Jul 23, 2025, 6:48:29 PM
+Completed at: śro 23 lip 18:48:30 2025 CEST

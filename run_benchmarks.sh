@@ -10,16 +10,17 @@ WARMUP_TIME=1             # -w: time to run each warmup iteration (seconds)
 
 # List of benchmarks to run
 BENCHMARKS=(
-    "BroadFlatMapBench"
-    "CollectBench"
-    "ForkChainedBench"
-    "ForkJoinBench"
-    "StreamAsyncBench"
-    "StreamAsyncNoChunkBench"
-    "StreamBench"
-    "SemaphoreBench"
-    "DeepBindBench"
-    "PingPongBench"
+    # "BroadFlatMapBench"
+    # "CollectBench"
+    # "ForkChainedBench"
+    # "ForkJoinBench"
+    # "StreamAsyncBench"
+    # "StreamAsyncNoChunkBench"
+    # "StreamBench"
+    # "SemaphoreBench"
+    # "DeepBindBench"
+    # "PingPongBench"
+    "HttpClientBench"
 )
 
 # Create bench_results directory if it doesn't exist

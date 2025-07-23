@@ -15,3 +15,14 @@ StreamAsyncBench
 StreamBench
 
 sbt "kyo-bench/jmh:run ForkChainedBench -wi 10 -i 10 -f 1 -t 1 -r 1 -w 1"
+
+
+
+sbt "kyo-bench/jmh:run ForkChainedBench.forkOx -wi 5 -i 10 -f 1 -t 1 -r 1 -w 1 -foe true -prof \"async:event=alloc,cpu;output=flamegraph\""
+
+
+
+export JDK_JAVA_OPTIONS="--enable-native-access=ALL-UNNAMED"
+sbt "kyo-bench/jmh:run ForkChainedBench.forkOx -wi 5 -i 10 -f 1 -t 1 -r 1 -w 1 -foe true -prof \"async:event=cpu;output=flamegraph;libPath=/Users/adamw/projects/kyo/async-profiler-4.1-macos/lib/libasyncProfiler.dylib\""
+
+OR: alloc
