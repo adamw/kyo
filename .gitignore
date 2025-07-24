@@ -15,3 +15,4 @@ jmh-result.json
 *.gpg
 test-output
 .DS_Store
+async-profiler-4.1-macos

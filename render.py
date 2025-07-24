@@ -125,14 +125,13 @@ benchmark_inputs = {
 [info] StreamBench.syncZIO    thrpt   10   8395.988 ± 107.166  ops/s
     """,
     "HttpClientBench": """
-[info] Benchmark                   Mode  Cnt      Score      Error  Units
-[info] HttpClientBench.forkCats   thrpt   10   9654.389 ±  307.599  ops/s
-[info] HttpClientBench.forkKyo    thrpt   10  15354.044 ± 1234.165  ops/s
-[info] HttpClientBench.forkOx     thrpt   10  13418.086 ±  742.933  ops/s
-[info] HttpClientBench.forkPekko  thrpt   10   9742.537 ± 1151.468  ops/s
-[info] HttpClientBench.forkZIO    thrpt   10  10113.894 ±  647.379  ops/s
-    """
-    
+[info] Benchmark                   Mode  Cnt      Score     Error  Units
+[info] HttpClientBench.forkCats   thrpt   10  10035.782 ± 365.793  ops/s
+[info] HttpClientBench.forkKyo    thrpt   10  14020.526 ± 364.845  ops/s
+[info] HttpClientBench.forkOx     thrpt   10  11417.140 ± 284.958  ops/s
+[info] HttpClientBench.forkPekko  thrpt   10   9123.715 ± 506.131  ops/s
+[info] HttpClientBench.forkZIO    thrpt   10  10186.003 ± 541.306  ops/s
+    """    
 }
 
 # Directory to store output charts
